@@ -11,10 +11,14 @@
             "id": "ce28555849f7ad1d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "04 - Technical Specifications/End-to-End System Pipeline.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "End-to-End System Pipeline"
             }
           }
         ]
@@ -75,8 +79,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,39 +140,21 @@
             }
           },
           {
-            "id": "081b8cd02e241d05",
+            "id": "70c2a77c3e0efe4a",
             "type": "leaf",
             "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "All properties"
-            }
-          },
-          {
-            "id": "261e6095f44193ae",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline"
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,16 +170,21 @@
   },
   "active": "ce28555849f7ad1d",
   "lastOpenFiles": [
+    "04 - Technical Specifications/End-to-End System Pipeline.md",
+    "05 - References & Glossary/Technical Glossary.md",
+    "05 - References & Glossary/Project References & Bibliography.md",
+    "assets/big-data-5vs-analysis.png",
     "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
+    "GitPrueba.md",
+    "Copia de Activity 1. Problem Discovery Lab.docx.pdf",
+    "Activity 1. Data Opportunity Mapping.docx-1.pdf",
+    "Untitled.base",
     "00 - Dashboard & Overview/TERRA-FIRE Executive Summary.md",
     "03 - Data Science (Opportunity Mapping)/05 - Gap & Risk Analysis.md",
     "02 - Disruptive Technologies (Future Exploration)/02 - Industrial Evolution & Tech Radar.md",
     "TERRA-FIRE Visual Overview.canvas",
-    "05 - References & Glossary/Technical Glossary.md",
-    "05 - References & Glossary/Project References & Bibliography.md",
     "04 - Technical Specifications/Offline-First Edge Architecture.md",
     "04 - Technical Specifications/Feature Store & Parquet Schema.md",
-    "04 - Technical Specifications/End-to-End System Pipeline.md",
     "make_module04_05_canvas.py",
     "01 - Integrative Project (Problem Discovery)/01 - Problem Definition & Context.md",
     "03 - Data Science (Opportunity Mapping)/06 - Dataset Specification & Recommendations.md",
@@ -204,7 +194,6 @@
     "03 - Data Science (Opportunity Mapping)/01 - Data Formulation & Decision Requirements.md",
     "make_module03.py",
     "README.md",
-    "assets/big-data-5vs-analysis.png",
     "02 - Disruptive Technologies (Future Exploration)/05 - Impact Analysis & Ethics.md",
     "02 - Disruptive Technologies (Future Exploration)/04 - Future Scenarios 2026-2036.md",
     "02 - Disruptive Technologies (Future Exploration)/03 - Disruptive Convergence.md",
@@ -218,9 +207,6 @@
     "make_module00_root.py",
     "generate_vault.py",
     "05 - References & Glossary",
-    "04 - Technical Specifications",
-    "03 - Data Science (Opportunity Mapping)",
-    "02 - Disruptive Technologies (Future Exploration)",
     "assets/brainstorming-board.png",
     "extracted_images/word/media/image8.png",
     "extracted_images/word/media/image9.png",
