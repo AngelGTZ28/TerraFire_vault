@@ -26,14 +26,14 @@ tags:
 
 ## 📌 Métricas y Parámetros Operativos Clave
 
-| Métrica / Parámetro | Valor Objetivo | Justificación Técnica |
-| :--- | :--- | :--- |
-| **Nivel de Madurez Tecnológica** | **TRL 2** | Concepto formulado y validado analíticamente contra literatura científica. |
-| **Ventana de Anticipación (Lead Time)** | **48 a 72 Horas** | Tiempo necesario para movilización preventiva de brigadas y moratorias de quema. |
-| **Resolución Espacial** | **10 a 20 Metros** | Vóxeles basados en Copernicus Sentinel-2 MSI para capturar micro-cañadas y laderas. |
-| **Cadencia Temporal** | **Diaria / 5 Días** | Reanálisis horario ERA5-Land (downscaling) + reflectancia orbital Sentinel cada 5 días. |
-| **Conectividad en Campo** | **0% (100% Offline)** | PWA con almacenamiento local SQLite/WASM y teselas vectoriales Mapbox (.pbf). |
-| **Causa Raíz Atendida** | **>80% Incendios** | Quemas agropecuarias (roza y quema) que escapan de control por cambio microclimático. |
+| Métrica / Parámetro                     | Valor Objetivo        | Justificación Técnica                                                                   |
+| :-------------------------------------- | :-------------------- | :-------------------------------------------------------------------------------------- |
+| **Nivel de Madurez Tecnológica**        | **TRL 2**             | Concepto formulado y validado analíticamente contra literatura científica.              |
+| **Ventana de Anticipación (Lead Time)** | **48 a 72 Horas**     | Tiempo necesario para movilización preventiva de brigadas y moratorias de quema.        |
+| **Resolución Espacial**                 | **10 a 20 Metros**    | Vóxeles basados en Copernicus Sentinel-2 MSI para capturar micro-cañadas y laderas.     |
+| **Cadencia Temporal**                   | **Diaria / 5 Días**   | Reanálisis horario ERA5-Land (downscaling) + reflectancia orbital Sentinel cada 5 días. |
+| **Conectividad en Campo**               | **0% (100% Offline)** | PWA con almacenamiento local SQLite/WASM y teselas vectoriales Mapbox (.pbf).           |
+| **Causa Raíz Atendida**                 | **>80% Incendios**    | Quemas agropecuarias (roza y quema) que escapan de control por cambio microclimático.   |
 
 ---
 
