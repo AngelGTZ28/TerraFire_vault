@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": "node_hub",
+      "x": 600,
+      "y": 300,
+      "width": 420,
+      "height": 260,
+      "type": "text",
+      "text": "# 🔥 TERRA-FIRE\n### Plataforma de Inteligencia Predictiva 48-72h\n\n- **Resolución:** 10-20m (Copernicus Sentinel-2)\n- **Arquitectura:** Offline-First PWA (0% Red)\n- **Modelo:** XGBoost + TreeSHAP\n- **Nivel Actual:** TRL 2\n\n[[00 - TERRA-FIRE Central Dashboard|Abrir Dashboard Central]]"
+    },
+    {
+      "id": "node_pdl",
+      "x": 50,
+      "y": 100,
+      "width": 440,
+      "height": 320,
+      "type": "text",
+      "text": "## 📘 Proyecto Integrador III\n### Problem Discovery Lab & TRL 1-2\n\n- [[01 - Problem Definition & Context|Definición del Problema]]\n- [[02 - Stakeholders & Empathy Maps|Ejidatarios y Brigadistas]]\n- [[03 - User Journey & Pain Points|User Journey & Dolores]]\n- [[04 - Ideation, HMW & Concept Evaluation|HMW y Selección]]\n- [[05 - Solution Concept & TRL Assessment|Concepto TERRA-FIRE]]"
+    },
+    {
+      "id": "node_td",
+      "x": 600,
+      "y": -220,
+      "width": 420,
+      "height": 320,
+      "type": "text",
+      "text": "## ⚡ Tecnologías Disruptivas\n### Radar y Prospectiva 2026-2036\n\n- [[01 - National Challenge & Strategic Context|Reto SECIHTI Eje 4 & Ishikawa]]\n- [[02 - Industrial Evolution & Tech Radar|Tech Radar 4 Cuadrantes]]\n- [[03 - Disruptive Convergence|Convergencia AI + GIS + Edge]]\n- [[04 - Future Scenarios 2026-2036|Escenarios 2036]]\n- [[05 - Impact Analysis & Ethics|Ética y Soberanía]]"
+    },
+    {
+      "id": "node_ds",
+      "x": 1150,
+      "y": 100,
+      "width": 440,
+      "height": 340,
+      "type": "text",
+      "text": "## 🔬 Ciencia de Datos\n### Data Opportunity Mapping & 5Vs\n\n- [[01 - Data Formulation & Decision Requirements|Requisitos de Decisión (DEC 01-04)]]\n- [[02 - Data Source Catalog & Ingestion|Sentinel-2, ERA5, DEM, FIRMS]]\n- [[03 - Big Data 5Vs & Ecosystem Architecture|5Vs y Arquitectura de Datos]]\n- [[04 - Feature Taxonomy & Prioritization|Variables: NDMI, SAVI, VPD]]\n- [[05 - Gap & Risk Analysis|Brechas y Matriz de Riesgos]]\n- [[06 - Dataset Specification & Recommendations|Esquema Parquet v1]]"
+    },
+    {
+      "id": "node_tech",
+      "x": 600,
+      "y": 700,
+      "width": 420,
+      "height": 300,
+      "type": "text",
+      "text": "## ⚙️ Especificaciones Técnicas\n### Implementación y Despliegue\n\n- [[End-to-End System Pipeline|Pipeline Completo]]\n- [[Feature Store & Parquet Schema|Fórmulas Matemáticas]]\n- [[Offline-First Edge Architecture|Arquitectura PWA Offline]]\n- [[Project References & Bibliography|Bibliografía APA 7]]\n- [[Technical Glossary|Glosario Técnico]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_pdl_hub",
+      "fromNode": "node_pdl",
+      "fromSide": "right",
+      "toNode": "node_hub",
+      "toSide": "left",
+      "label": "Validación de Usuario & TRL 2"
+    },
+    {
+      "id": "e_td_hub",
+      "fromNode": "node_td",
+      "fromSide": "bottom",
+      "toNode": "node_hub",
+      "toSide": "top",
+      "label": "Convergencia y Radar"
+    },
+    {
+      "id": "e_ds_hub",
+      "fromNode": "node_ds",
+      "fromSide": "left",
+      "toNode": "node_hub",
+      "toSide": "right",
+      "label": "Datos & Machine Learning"
+    },
+    {
+      "id": "e_hub_tech",
+      "fromNode": "node_hub",
+      "fromSide": "bottom",
+      "toNode": "node_tech",
+      "toSide": "top",
+      "label": "Especificación Técnica"
+    }
+  ]
+}

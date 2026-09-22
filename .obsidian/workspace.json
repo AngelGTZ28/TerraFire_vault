@@ -1,0 +1,256 @@
+{
+  "main": {
+    "id": "7597ab6a3baaeca4",
+    "type": "split",
+    "children": [
+      {
+        "id": "e32a92309f8b0a33",
+        "type": "tabs",
+        "dimension": 50.05364806866953,
+        "children": [
+          {
+            "id": "ce28555849f7ad1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 - TERRA-FIRE Central Dashboard"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4bef88a78c67916d",
+        "type": "tabs",
+        "dimension": 49.946351931330476,
+        "children": [
+          {
+            "id": "ec29dd8b9002d6bb",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "54a07e335462c9d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd623a8d59a643d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f695df64c2bcc93d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "385bf12258689d3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d62d6a98041feb30",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "86fcb09bcc756939",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ee0d551d008cf0f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77801a29ff56895c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "fd9798e01cd06e90",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "2d68932442b8f83b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "081b8cd02e241d05",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "261e6095f44193ae",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ce28555849f7ad1d",
+  "lastOpenFiles": [
+    "02 - Disruptive Technologies (Future Exploration)/02 - Industrial Evolution & Tech Radar.md",
+    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
+    "TERRA-FIRE Visual Overview.canvas",
+    "05 - References & Glossary/Technical Glossary.md",
+    "05 - References & Glossary/Project References & Bibliography.md",
+    "04 - Technical Specifications/Offline-First Edge Architecture.md",
+    "04 - Technical Specifications/Feature Store & Parquet Schema.md",
+    "04 - Technical Specifications/End-to-End System Pipeline.md",
+    "make_module04_05_canvas.py",
+    "01 - Integrative Project (Problem Discovery)/01 - Problem Definition & Context.md",
+    "03 - Data Science (Opportunity Mapping)/06 - Dataset Specification & Recommendations.md",
+    "03 - Data Science (Opportunity Mapping)/05 - Gap & Risk Analysis.md",
+    "03 - Data Science (Opportunity Mapping)/04 - Feature Taxonomy & Prioritization.md",
+    "03 - Data Science (Opportunity Mapping)/03 - Big Data 5Vs & Ecosystem Architecture.md",
+    "03 - Data Science (Opportunity Mapping)/02 - Data Source Catalog & Ingestion.md",
+    "03 - Data Science (Opportunity Mapping)/01 - Data Formulation & Decision Requirements.md",
+    "make_module03.py",
+    "README.md",
+    "assets/big-data-5vs-analysis.png",
+    "02 - Disruptive Technologies (Future Exploration)/05 - Impact Analysis & Ethics.md",
+    "02 - Disruptive Technologies (Future Exploration)/04 - Future Scenarios 2026-2036.md",
+    "02 - Disruptive Technologies (Future Exploration)/03 - Disruptive Convergence.md",
+    "02 - Disruptive Technologies (Future Exploration)/01 - National Challenge & Strategic Context.md",
+    "make_module02.py",
+    "01 - Integrative Project (Problem Discovery)/05 - Solution Concept & TRL Assessment.md",
+    "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
+    "01 - Integrative Project (Problem Discovery)/03 - User Journey & Pain Points.md",
+    "01 - Integrative Project (Problem Discovery)/02 - Stakeholders & Empathy Maps.md",
+    "make_module01.py",
+    "00 - Dashboard & Overview/TERRA-FIRE Executive Summary.md",
+    "make_module00_root.py",
+    "generate_vault.py",
+    "05 - References & Glossary",
+    "04 - Technical Specifications",
+    "03 - Data Science (Opportunity Mapping)",
+    "02 - Disruptive Technologies (Future Exploration)",
+    "assets/brainstorming-board.png",
+    "extracted_images/word/media/image8.png",
+    "extracted_images/word/media/image9.png",
+    "assets/dataset-design-schema.png",
+    "assets/data-risk-matrix.png",
+    "assets/gap-analysis-report.png",
+    "assets/comprehensive-data-opportunity-map.png",
+    "assets/feature-prioritization-matrix.png",
+    "assets/variable-classification-ml.png"
+  ]
+}
