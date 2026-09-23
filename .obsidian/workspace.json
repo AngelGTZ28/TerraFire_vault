@@ -208,13 +208,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70c2a77c3e0efe4a",
+  "active": "ce28555849f7ad1d",
   "lastOpenFiles": [
+    "Work/Activity 2 - Global Innovation Observatory.md",
+    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
     "gitignore",
     "Work",
     "00 - Dashboard & Overview/TERRA-FIRE Executive Summary.md",
     "01 - Integrative Project (Problem Discovery)/01 - Problem Definition & Context.md",
-    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
     "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
     "01 - Integrative Project (Problem Discovery)/03 - User Journey & Pain Points.md",
     "01 - Integrative Project (Problem Discovery)/02 - Stakeholders & Empathy Maps.md",
@@ -247,7 +248,6 @@
     "01 - Integrative Project (Problem Discovery)/05 - Solution Concept & TRL Assessment.md",
     "make_module01.py",
     "make_module00_root.py",
-    "generate_vault.py",
     "assets/brainstorming-board.png",
     "extracted_images/word/media/image8.png",
     "extracted_images/word/media/image9.png",
