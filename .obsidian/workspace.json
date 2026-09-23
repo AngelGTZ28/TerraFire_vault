@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
+                "file": "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - Ideation, HMW & Concept Evaluation"
+              "title": "06 - Global Innovation Observatory"
             }
           }
         ]
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
+                "file": "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
+                "file": "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -201,11 +201,13 @@
   },
   "active": "a8d0d248e97ca812",
   "lastOpenFiles": [
+    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
+    "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
+    "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
     "01 - Integrative Project (Problem Discovery)/03 - User Journey & Pain Points.md",
     "01 - Integrative Project (Problem Discovery)/02 - Stakeholders & Empathy Maps.md",
     "01 - Integrative Project (Problem Discovery)/01 - Problem Definition & Context.md",
     "00 - Dashboard & Overview/TERRA-FIRE Executive Summary.md",
-    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
     "04 - Technical Specifications/End-to-End System Pipeline.md",
     "TERRA-FIRE Visual Overview.canvas",
     "Untitled.base",
@@ -233,7 +235,6 @@
     "02 - Disruptive Technologies (Future Exploration)/01 - National Challenge & Strategic Context.md",
     "make_module02.py",
     "01 - Integrative Project (Problem Discovery)/05 - Solution Concept & TRL Assessment.md",
-    "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
     "make_module01.py",
     "make_module00_root.py",
     "generate_vault.py",
