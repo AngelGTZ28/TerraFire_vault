@@ -13,22 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Activity 2 - Global Innovation Observatory.md",
+                "file": "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Activity 2 - Global Innovation Observatory"
-            }
-          },
-          {
-            "id": "2e667ab04ed69216",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "04 - Ideation, HMW & Concept Evaluation"
             }
           }
         ]
@@ -109,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/Activity 2 - Global Innovation Observatory.md",
+                "file": "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -190,7 +181,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -208,18 +199,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70c2a77c3e0efe4a",
+  "active": "a8d0d248e97ca812",
   "lastOpenFiles": [
-    "Work/Activity 2 - Global Innovation Observatory.md",
-    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
-    "Work/Activity 2. Global Innovation Observatory.docx",
-    "gitignore",
-    "Work",
-    "00 - Dashboard & Overview/TERRA-FIRE Executive Summary.md",
-    "01 - Integrative Project (Problem Discovery)/01 - Problem Definition & Context.md",
-    "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
     "01 - Integrative Project (Problem Discovery)/03 - User Journey & Pain Points.md",
     "01 - Integrative Project (Problem Discovery)/02 - Stakeholders & Empathy Maps.md",
+    "01 - Integrative Project (Problem Discovery)/01 - Problem Definition & Context.md",
+    "00 - Dashboard & Overview/TERRA-FIRE Executive Summary.md",
+    "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
     "04 - Technical Specifications/End-to-End System Pipeline.md",
     "TERRA-FIRE Visual Overview.canvas",
     "Untitled.base",
@@ -246,7 +232,12 @@
     "02 - Disruptive Technologies (Future Exploration)/03 - Disruptive Convergence.md",
     "02 - Disruptive Technologies (Future Exploration)/01 - National Challenge & Strategic Context.md",
     "make_module02.py",
+    "01 - Integrative Project (Problem Discovery)/05 - Solution Concept & TRL Assessment.md",
+    "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
     "make_module01.py",
+    "make_module00_root.py",
+    "generate_vault.py",
+    "05 - References & Glossary",
     "assets/brainstorming-board.png",
     "extracted_images/word/media/image8.png",
     "extracted_images/word/media/image9.png",
