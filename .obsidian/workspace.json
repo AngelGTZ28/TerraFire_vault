@@ -194,8 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,7 +208,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ce28555849f7ad1d",
+  "active": "70c2a77c3e0efe4a",
   "lastOpenFiles": [
     "Work/Activity 2 - Global Innovation Observatory.md",
     "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
