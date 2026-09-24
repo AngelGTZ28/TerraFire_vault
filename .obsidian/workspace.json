@@ -11,10 +11,14 @@
             "id": "ce28555849f7ad1d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Work/Activity 2. Scientific Intelligence Report.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Activity 2. Scientific Intelligence Report"
             }
           }
         ]
@@ -114,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
+                "file": "Work/Activity 2. Scientific Intelligence Report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -167,6 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Work/Activity 2. Scientific Intelligence Report.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -197,6 +202,9 @@
   },
   "active": "ce28555849f7ad1d",
   "lastOpenFiles": [
+    "Work/Activity 2. Scientific Intelligence Report.md",
+    "Work",
+    "Nueva carpeta",
     "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
     "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
     "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
@@ -230,11 +238,8 @@
     "02 - Disruptive Technologies (Future Exploration)/03 - Disruptive Convergence.md",
     "02 - Disruptive Technologies (Future Exploration)/01 - National Challenge & Strategic Context.md",
     "make_module02.py",
-    "01 - Integrative Project (Problem Discovery)/05 - Solution Concept & TRL Assessment.md",
     "make_module01.py",
     "make_module00_root.py",
-    "generate_vault.py",
-    "05 - References & Glossary",
     "assets/brainstorming-board.png",
     "extracted_images/word/media/image8.png",
     "extracted_images/word/media/image9.png",
