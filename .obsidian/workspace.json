@@ -11,10 +11,14 @@
             "id": "47a533f56465f3dd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "00 - TERRA-FIRE Central Dashboard"
             }
           }
         ]
@@ -130,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
+                "file": "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -159,8 +163,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -193,11 +197,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 233.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,7 +216,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ce28555849f7ad1d",
+  "active": "47a533f56465f3dd",
   "lastOpenFiles": [
     "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
     "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
