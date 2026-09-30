@@ -96,13 +96,22 @@ flowchart TD
 - [[05 - Gap & Risk Analysis|05. Análisis de Brechas y Matriz de Riesgos]]: Mapa integral de oportunidades, brechas técnicas (calibración, latencia óptica) y riesgos analíticos (R-01 a R-06).
 - [[06 - Dataset Specification & Recommendations|06. Especificación del Dataset y Recomendaciones]]: Esquema formal `terra_fire_spatiotemporal_matrix_v1.parquet` y hoja de ruta estratégica.
 
-### 4. ⚙️ Especificaciones Técnicas y Arquitectura
+### 4. 🔬 Scientific Intelligence Report (Literature Review)
+*Evaluación sistemática de la literatura, brechas tecnológicas y fundamentación científica del proyecto.*
+- [[01 - Research Problem & Questions|01. Problema de Investigación y Preguntas]]: Resumen del problema y planteamiento de las preguntas primarias y secundarias.
+- [[02 - Scientific Search Strategy & Selection|02. Estrategia de Búsqueda y Selección]]: Criterios de elegibilidad, flujo PRISMA y selección de 15 artículos de alto impacto.
+- [[03 - Scientific Evidence & Methodological Comparison|03. Evidencia Científica y Comparación Metodológica]]: Extracción de datos y síntesis de los paradigmas metodológicos (XGBoost vs. Deep Learning).
+- [[04 - Thematic Literature Map & Evolution|04. Mapa Temático y Evolución]]: Pilares de investigación y las cinco eras de la evolución científica de los incendios.
+- [[05 - Science-Technology Connection & Gap Analysis|05. Conexión Ciencia-Tecnología y Brechas]]: Mapeo de principios a software (Sentinel-2, XGBoost, Tippecanoe) y priorización de 4 brechas.
+- [[06 - Scientific Foundation & Hypothesis|06. Fundamentación Científica e Hipótesis]]: Principios físicos (VPD, LFMC), hipótesis preliminar, evaluación TRL 1-2 y conclusiones.
+
+### 5. ⚙️ Especificaciones Técnicas y Arquitectura
 *Guías detalladas para implementación de software, algoritmos y almacenamiento offline.*
 - [[End-to-End System Pipeline|Pipeline Técnico Extremo a Extremo]]: Diagramas de secuencia y flujo de ingesta, inferencia y entrega.
 - [[Feature Store & Parquet Schema|Feature Store y Fórmulas Matemáticas]]: Formulación de NDMI, SAVI, NBR, VPD y diccionario de datos en Parquet.
 - [[Offline-First Edge Architecture|Arquitectura Edge y Modo Offline]]: Implementación de PWA, Service Workers, teselas vectoriales `.pbf` y almacenamiento SQLite/WASM.
 
-### 5. 📚 Referencias y Recursos
+### 6. 📚 Referencias y Recursos
 - [[Project References & Bibliography|Bibliografía y Referencias Oficiales]]: Catálogo de literatura científica y fuentes gubernamentales bajo formato APA 7ma edición.
 - [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, etc.).
 

@@ -11,10 +11,14 @@
             "id": "ce28555849f7ad1d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06 - Scientific Foundation & Hypothesis"
             }
           }
         ]
@@ -114,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/Activity 2. Scientific Intelligence Report.md",
+                "file": "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -177,12 +181,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,12 +201,12 @@
   },
   "active": "ce28555849f7ad1d",
   "lastOpenFiles": [
-    "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
     "06 - Scientific Intelligence Report/04 - Thematic Literature Map & Evolution.md",
-    "06 - Scientific Intelligence Report/01 - Research Problem & Questions.md",
     "06 - Scientific Intelligence Report/03 - Scientific Evidence & Methodological Comparison.md",
     "06 - Scientific Intelligence Report/02 - Scientific Search Strategy & Selection.md",
+    "06 - Scientific Intelligence Report/01 - Research Problem & Questions.md",
+    "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report",
     "split.py",
     "Work/Activity 2. Scientific Intelligence Report.md",
