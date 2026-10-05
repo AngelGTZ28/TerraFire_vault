@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e32a92309f8b0a33",
+        "id": "28e2ec8372c0109a",
         "type": "tabs",
         "children": [
           {
-            "id": "ce28555849f7ad1d",
+            "id": "d8e4fd690e9be44b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Work/Copia de Activity 2. Data Acquisition Strategy.docx.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Copia de Activity 2. Data Acquisition Strategy.docx"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -197,17 +195,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ce28555849f7ad1d",
+  "active": "70c2a77c3e0efe4a",
   "lastOpenFiles": [
-    "07 - Data Acquisition Strategy/06 - Acquisition Plan & Readiness Decision.md",
     "07 - Data Acquisition Strategy/05 - Selection & Integration Feasibility.md",
     "07 - Data Acquisition Strategy/04 - Governance & Traceability.md",
     "07 - Data Acquisition Strategy/03 - Coverage & Quality Assessment.md",
     "07 - Data Acquisition Strategy/02 - Candidate Dataset Inventory.md",
     "07 - Data Acquisition Strategy/01 - Data Requirements.md",
+    "Work/Copia de Activity 2. Data Acquisition Strategy.docx.pdf",
+    "07 - Data Acquisition Strategy/06 - Acquisition Plan & Readiness Decision.md",
     "07 - Data Acquisition Strategy",
     "Work/Activity 2. Scientific Intelligence Report.md",
-    "Work/Copia de Activity 2. Data Acquisition Strategy.docx.pdf",
     "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
     "06 - Scientific Intelligence Report/04 - Thematic Literature Map & Evolution.md",
@@ -235,7 +233,6 @@
     "Copia de Activity 1. Problem Discovery Lab.docx.pdf",
     "Activity 1. Data Opportunity Mapping.docx-1.pdf",
     "03 - Data Science (Opportunity Mapping)/05 - Gap & Risk Analysis.md",
-    "02 - Disruptive Technologies (Future Exploration)/02 - Industrial Evolution & Tech Radar.md",
     "make_module04_05_canvas.py",
     "assets/brainstorming-board.png",
     "extracted_images/word/media/image8.png",
