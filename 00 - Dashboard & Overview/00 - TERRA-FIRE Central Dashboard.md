@@ -96,7 +96,16 @@ flowchart TD
 - [[05 - Gap & Risk Analysis|05. Análisis de Brechas y Matriz de Riesgos]]: Mapa integral de oportunidades, brechas técnicas (calibración, latencia óptica) y riesgos analíticos (R-01 a R-06).
 - [[06 - Dataset Specification & Recommendations|06. Especificación del Dataset y Recomendaciones]]: Esquema formal `terra_fire_spatiotemporal_matrix_v1.parquet` y hoja de ruta estratégica.
 
-### 4. 🔬 Scientific Intelligence Report (Literature Review)
+### 4. 📥 Ciencia de Datos (Data Acquisition Strategy)
+*Localización, evaluación, gobernanza y selección de datasets espaciales reales para el pipeline de Machine Learning.*
+- [[01 - Data Requirements|01. Requisitos de Datos]]: Continuidad desde DOM y decisiones operativas soportadas.
+- [[02 - Candidate Dataset Inventory|02. Inventario de Datasets Candidatos]]: Perfiles detallados de CONAFOR, NASA FIRMS, ERA5-Land, Copernicus GLO-30 y Sentinel-2.
+- [[03 - Coverage & Quality Assessment|03. Análisis de Cobertura y Calidad]]: Evaluación de variables, brechas críticas (mitigación de LFMC y escala micro-meteorológica) y métricas de calidad.
+- [[04 - Governance & Traceability|04. Gobernanza y Trazabilidad]]: Riesgos éticos (estigmatización, sesgo algorítmico) y protocolo de preservación.
+- [[05 - Selection & Integration Feasibility|05. Selección y Factibilidad de Integración]]: Resoluciones, H3 hexágonos, downscaling adiabático y mitigación de discrepancias espaciotemporales.
+- [[06 - Acquisition Plan & Readiness Decision|06. Plan de Adquisición y Decisión de Preparación]]: Decisión final cuantitativa y listado de referencias bibliográficas.
+
+### 5. 🔬 Scientific Intelligence Report (Literature Review)
 *Evaluación sistemática de la literatura, brechas tecnológicas y fundamentación científica del proyecto.*
 - [[01 - Research Problem & Questions|01. Problema de Investigación y Preguntas]]: Resumen del problema y planteamiento de las preguntas primarias y secundarias.
 - [[02 - Scientific Search Strategy & Selection|02. Estrategia de Búsqueda y Selección]]: Criterios de elegibilidad, flujo PRISMA y selección de 15 artículos de alto impacto.
@@ -105,13 +114,13 @@ flowchart TD
 - [[05 - Science-Technology Connection & Gap Analysis|05. Conexión Ciencia-Tecnología y Brechas]]: Mapeo de principios a software (Sentinel-2, XGBoost, Tippecanoe) y priorización de 4 brechas.
 - [[06 - Scientific Foundation & Hypothesis|06. Fundamentación Científica e Hipótesis]]: Principios físicos (VPD, LFMC), hipótesis preliminar, evaluación TRL 1-2 y conclusiones.
 
-### 5. ⚙️ Especificaciones Técnicas y Arquitectura
+### 6. ⚙️ Especificaciones Técnicas y Arquitectura
 *Guías detalladas para implementación de software, algoritmos y almacenamiento offline.*
 - [[End-to-End System Pipeline|Pipeline Técnico Extremo a Extremo]]: Diagramas de secuencia y flujo de ingesta, inferencia y entrega.
 - [[Feature Store & Parquet Schema|Feature Store y Fórmulas Matemáticas]]: Formulación de NDMI, SAVI, NBR, VPD y diccionario de datos en Parquet.
 - [[Offline-First Edge Architecture|Arquitectura Edge y Modo Offline]]: Implementación de PWA, Service Workers, teselas vectoriales `.pbf` y almacenamiento SQLite/WASM.
 
-### 6. 📚 Referencias y Recursos
+### 7. 📚 Referencias y Recursos
 - [[Project References & Bibliography|Bibliografía y Referencias Oficiales]]: Catálogo de literatura científica y fuentes gubernamentales bajo formato APA 7ma edición.
 - [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, etc.).
 

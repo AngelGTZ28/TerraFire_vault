@@ -11,14 +11,12 @@
             "id": "ce28555849f7ad1d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
-                "mode": "source",
-                "source": false
+                "file": "Work/Copia de Activity 2. Data Acquisition Strategy.docx.pdf"
               },
-              "icon": "lucide-file",
-              "title": "06 - Scientific Foundation & Hypothesis"
+              "icon": "lucide-file-text",
+              "title": "Copia de Activity 2. Data Acquisition Strategy.docx"
             }
           }
         ]
@@ -201,15 +199,23 @@
   },
   "active": "ce28555849f7ad1d",
   "lastOpenFiles": [
+    "07 - Data Acquisition Strategy/06 - Acquisition Plan & Readiness Decision.md",
+    "07 - Data Acquisition Strategy/05 - Selection & Integration Feasibility.md",
+    "07 - Data Acquisition Strategy/04 - Governance & Traceability.md",
+    "07 - Data Acquisition Strategy/03 - Coverage & Quality Assessment.md",
+    "07 - Data Acquisition Strategy/02 - Candidate Dataset Inventory.md",
+    "07 - Data Acquisition Strategy/01 - Data Requirements.md",
+    "07 - Data Acquisition Strategy",
+    "Work/Activity 2. Scientific Intelligence Report.md",
+    "Work/Copia de Activity 2. Data Acquisition Strategy.docx.pdf",
+    "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
     "06 - Scientific Intelligence Report/04 - Thematic Literature Map & Evolution.md",
     "06 - Scientific Intelligence Report/03 - Scientific Evidence & Methodological Comparison.md",
     "06 - Scientific Intelligence Report/02 - Scientific Search Strategy & Selection.md",
     "06 - Scientific Intelligence Report/01 - Research Problem & Questions.md",
-    "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report",
     "split.py",
-    "Work/Activity 2. Scientific Intelligence Report.md",
     "Work",
     "Nueva carpeta",
     "02 - Disruptive Technologies (Future Exploration)/06 - Global Innovation Observatory.md",
@@ -230,15 +236,7 @@
     "Activity 1. Data Opportunity Mapping.docx-1.pdf",
     "03 - Data Science (Opportunity Mapping)/05 - Gap & Risk Analysis.md",
     "02 - Disruptive Technologies (Future Exploration)/02 - Industrial Evolution & Tech Radar.md",
-    "04 - Technical Specifications/Offline-First Edge Architecture.md",
-    "04 - Technical Specifications/Feature Store & Parquet Schema.md",
     "make_module04_05_canvas.py",
-    "03 - Data Science (Opportunity Mapping)/06 - Dataset Specification & Recommendations.md",
-    "03 - Data Science (Opportunity Mapping)/04 - Feature Taxonomy & Prioritization.md",
-    "03 - Data Science (Opportunity Mapping)/03 - Big Data 5Vs & Ecosystem Architecture.md",
-    "03 - Data Science (Opportunity Mapping)/02 - Data Source Catalog & Ingestion.md",
-    "make_module03.py",
-    "make_module02.py",
     "assets/brainstorming-board.png",
     "extracted_images/word/media/image8.png",
     "extracted_images/word/media/image9.png",
