@@ -65,5 +65,11 @@ tags:
 
 El laboratorio de descubrimiento del problema demostró con evidencia documental y análisis de usuarios que **el principal cuello de botella del combate de incendios en México no es la falta de valentía de los brigadistas ni la carencia de agua, sino la asimetría y el retraso en la información**. TERRA-FIRE sienta las bases conceptuales y teóricas (TRL 2) para resolver esta asimetría mediante una solución elegante, reproducible y adaptada a la realidad comunitaria.
 
+> [!success] Validación Formal de Concepto (Actividad 3)
+> Este concepto inicial evolucionó y fue formalmente validado en la **Actividad 3 (Solution Concept Validation)** mediante 4 hipótesis científicas ($H_1$ a $H_4$) y 4 protocolos de prueba de laboratorio, obteniendo el estatus oficial de **READY FOR PoC** para transición a **TRL 3**.
+> 
+> *Ver documentación completa en:* [[01 - Solution Concept & System Architecture]] | [[08 - PoC Readiness Decision & Experimental Scope]]
+
 ---
-*Notas vinculadas:* [[01 - Problem Definition & Context]] | [[04 - Ideation, HMW & Concept Evaluation]] | [[End-to-End System Pipeline]]
+*Notas vinculadas:* [[01 - Problem Definition & Context]] | [[04 - Ideation, HMW & Concept Evaluation]] | [[01 - Solution Concept & System Architecture]] | [[End-to-End System Pipeline]]
+

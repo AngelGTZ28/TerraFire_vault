@@ -90,4 +90,5 @@ Semáforo de quema y corredores de escape seguros"]
    Cuando el brigadista o campesino tiene acceso a internet en el pueblo o la cabecera municipal, la Progressive Web App descarga la tesela de su municipio. Al adentrarse en la sierra sin cobertura celular, el mapa funciona al 100% de manera local.
 
 ---
-*Notas vinculadas:* [[Feature Store & Parquet Schema]] | [[Offline-First Edge Architecture]] | [[03 - Big Data 5Vs & Ecosystem Architecture]]
+*Notas vinculadas:* [[Feature Store & Parquet Schema]] | [[Offline-First Edge Architecture]] | [[03 - Big Data 5Vs & Ecosystem Architecture]] | [[02 - Conceptual Solution Model & Component Flow]] | [[01 - Solution Concept & System Architecture]]
+
