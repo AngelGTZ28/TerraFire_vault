@@ -25,17 +25,24 @@
             "id": "49ecd04c2472f8af",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00 - TERRA-FIRE Central Dashboard"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "66175c08b17aac78",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -95,22 +102,6 @@
           },
           {
             "id": "d8e4fd690e9be44b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
-      },
-      {
-        "id": "2c8b5469ed671c1b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "66175c08b17aac78",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -239,11 +230,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ccd1729735be7238",
+  "active": "49ecd04c2472f8af",
   "lastOpenFiles": [
-    "Work/Activity 3. Data Engineering Lab.docx.pdf",
     "00 - Dashboard & Overview/00 - TERRA-FIRE Central Dashboard.md",
     "08 - Solution Concept Validation/01 - Solution Concept & System Architecture.md",
+    "Work/Activity 3. Data Engineering Lab.docx.pdf",
     "08 - Solution Concept Validation/08 - PoC Readiness Decision & Experimental Scope.md",
     "08 - Solution Concept Validation/07 - Multi-Dimensional Conceptual Assessment.md",
     "08 - Solution Concept Validation/06 - Experimental Design & Validation Protocols.md",
@@ -286,7 +277,6 @@
     "01 - Integrative Project (Problem Discovery)/04 - Ideation, HMW & Concept Evaluation.md",
     "TERRA-FIRE Visual Overview.canvas",
     "Untitled.base",
-    "Copia de Activity 1. Problem Discovery Lab.docx.pdf",
-    "Activity 1. Data Opportunity Mapping.docx-1.pdf"
+    "Copia de Activity 1. Problem Discovery Lab.docx.pdf"
   ]
 }
