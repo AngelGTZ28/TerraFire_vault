@@ -7,7 +7,7 @@ authors:
   - "Angel Emilio Gutierrez Lozano (4341)"
   - "Emiliano Betanzos Valtierra (4795)"
 advisor: "Dr. Sergio Valadez Godínez"
-trl_level: "TRL 2 - Technology Concept Formulated"
+trl_level: "TRL 2 Validated -> Ready for PoC (TRL 3)"
 lead_time: "48-72 Horas Pre-Ignición"
 resolution: "10-20 Metros (Copernicus Sentinel-2)"
 tags:
@@ -15,12 +15,13 @@ tags:
   - moc
   - terra-fire
   - system-architecture
+  - poc-readiness
 ---
 
 # 🛰️ TERRA-FIRE: Panel Central de Control & Mapa de Contenido (MOC)
 
 > [!tip] Navegación Rápida
-> Este panel es el centro neurálgico de la bóveda. Conecta los 3 pilares académicos del cuatrimestre Sep-Dic 2026 con la especificación técnica de la plataforma **TERRA-FIRE**. También puedes abrir [[TERRA-FIRE Visual Overview.canvas|el Lienzo Visual Canvas]] para una experiencia en 2D.
+> Este panel es el centro neurálgico de la bóveda. Conecta los pilares académicos del cuatrimestre Sep-Dic 2026 con la especificación técnica de la plataforma **TERRA-FIRE**. Incluye la validación completa de concepto (**Actividad 3: READY FOR PoC**). También puedes abrir [[TERRA-FIRE Visual Overview.canvas|el Lienzo Visual Canvas]] para una experiencia en 2D.
 
 ---
 
@@ -28,12 +29,12 @@ tags:
 
 | Métrica / Parámetro                     | Valor Objetivo        | Justificación Técnica                                                                   |
 | :-------------------------------------- | :-------------------- | :-------------------------------------------------------------------------------------- |
-| **Nivel de Madurez Tecnológica**        | **TRL 2**             | Concepto formulado y validado analíticamente contra literatura científica.              |
+| **Nivel de Madurez Tecnológica**        | **TRL 2 Validado ➔ TRL 3** | Concepto formalmente validado con 4 hipótesis ($H_1$–$H_4$); estatus **READY FOR PoC**. |
 | **Ventana de Anticipación (Lead Time)** | **48 a 72 Horas**     | Tiempo necesario para movilización preventiva de brigadas y moratorias de quema.        |
 | **Resolución Espacial**                 | **10 a 20 Metros**    | Vóxeles basados en Copernicus Sentinel-2 MSI para capturar micro-cañadas y laderas.     |
 | **Cadencia Temporal**                   | **Diaria / 5 Días**   | Reanálisis horario ERA5-Land (downscaling) + reflectancia orbital Sentinel cada 5 días. |
-| **Conectividad en Campo**               | **0% (100% Offline)** | PWA con almacenamiento local SQLite/WASM y teselas vectoriales Mapbox (.pbf).           |
-| **Causa Raíz Atendida**                 | **>80% Incendios**    | Quemas agropecuarias (roza y quema) que escapan de control por cambio microclimático.   |
+| **Conectividad en Campo**               | **0% (100% Offline)** | PWA con almacenamiento local SQLite/WASM y teselas vectoriales Tippecanoe (<12 MB).     |
+| **Causa Raíz Atendida**                 | **>80% Incendios**    | Quemas agropecuarias (roza y quema) que escapan de control por cambio microclimático (VPD). |
 
 ---
 
@@ -114,15 +115,31 @@ flowchart TD
 - [[05 - Science-Technology Connection & Gap Analysis|05. Conexión Ciencia-Tecnología y Brechas]]: Mapeo de principios a software (Sentinel-2, XGBoost, Tippecanoe) y priorización de 4 brechas.
 - [[06 - Scientific Foundation & Hypothesis|06. Fundamentación Científica e Hipótesis]]: Principios físicos (VPD, LFMC), hipótesis preliminar, evaluación TRL 1-2 y conclusiones.
 
-### 6. ⚙️ Especificaciones Técnicas y Arquitectura
+### 6. 🎯 Validación de Concepto de Solución (TRL 2 ➔ TRL 3)
+*Validación formal del concepto, matriz de incertidumbres A1-A4, hipótesis falsables H1-H4, 4 diseños experimentales y veredicto READY FOR PoC.*
+- [[01 - Solution Concept & System Architecture|01. Concepto de Solución y Arquitectura Funcional]]: Ficha técnica del concepto, usuarios clave, salidas operativas y alineación NOM-015.
+- [[02 - Conceptual Solution Model & Component Flow|02. Modelo Conceptual y Flujo de Componentes]]: Las dos capas operativas, los 5 subsistemas y formulación de NDMI, VPD Tetens y TreeSHAP.
+- [[03 - Critical Assumptions & Research Questions|03. Supuestos Críticos y Preguntas de Investigación]]: Los 4 dominios de vulnerabilidad (A1 a A4) y preguntas de investigación asociadas (RQ1 a RQ4).
+- [[04 - Hypotheses Formulation & Gating|04. Formulación de Hipótesis y Falsabilidad]]: Hipótesis H1 a H4 con variables independientes, dependientes, de control y umbrales numéricos.
+- [[05 - Validation Criteria & Performance Metrics|05. Criterios de Validación y Métricas]]: Justificación de PR-AUC vs ROC-AUC, calibración Brier y líneas base operativas (SPPIF, KernelSHAP, GeoTIFF, persistencia).
+- [[06 - Experimental Design & Validation Protocols|06. Diseño Experimental y Protocolos]]: Procedimientos de laboratorio para Experimentos 1, 2, 3 y 4 (Spatial Block CV, TreeSHAP latency, PWA offline, SAR C-band).
+- [[07 - Multi-Dimensional Conceptual Assessment|07. Evaluación Conceptual Multidimensional]]: Calificación unánime STRONG en las 6 dimensiones de ingeniería y análisis de brechas.
+- [[08 - PoC Readiness Decision & Experimental Scope|08. Decisión de Preparación para PoC y Alcance]]: Veredicto formal **READY FOR PoC**, delimitación dentro/fuera de alcance en TRL 3 y conclusiones.
+
+### 7. ⚙️ Especificaciones Técnicas y Arquitectura
 *Guías detalladas para implementación de software, algoritmos y almacenamiento offline.*
 - [[End-to-End System Pipeline|Pipeline Técnico Extremo a Extremo]]: Diagramas de secuencia y flujo de ingesta, inferencia y entrega.
 - [[Feature Store & Parquet Schema|Feature Store y Fórmulas Matemáticas]]: Formulación de NDMI, SAVI, NBR, VPD y diccionario de datos en Parquet.
 - [[Offline-First Edge Architecture|Arquitectura Edge y Modo Offline]]: Implementación de PWA, Service Workers, teselas vectoriales `.pbf` y almacenamiento SQLite/WASM.
 
-### 7. 📚 Referencias y Recursos
+### 8. 🧪 Ciencia de Datos (Data Engineering Lab - ETL)
+*Diseño e implementación del pipeline ETL reproducible, matriz analítica en Apache Parquet y suite de validación automatizada.*
+- [[Activity 3 - Data Engineering Lab - Report|Actividad 3: Data Engineering Lab - Reporte Oficial]]: Pipeline de ingeniería de datos reproducible de 4 capas, limpieza y perfilado de 101,003 registros de CONAFOR, 657,791 detecciones NASA FIRMS y 17,544 horas de ERA5-Land. Formulación matemática de VPD (Tetens), downscaling adiabático, integración de 18,275 vóxeles vóxel-tiempo, exportación Parquet (0.30 MB) y dictamen **READY FOR ANALYSIS**.
+- **Repositorio Oficial:** [GitHub: AngelGTZ28/TERRA-FIRE](https://github.com/AngelGTZ28/TERRA-FIRE)
+
+### 9. 📚 Referencias y Recursos
 - [[Project References & Bibliography|Bibliografía y Referencias Oficiales]]: Catálogo de literatura científica y fuentes gubernamentales bajo formato APA 7ma edición.
-- [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, etc.).
+- [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, PR-AUC, etc.).
 
 ---
 
@@ -157,7 +174,7 @@ sequenceDiagram
 timeline
     title Hoja de Ruta de Desarrollo TERRA-FIRE
     Septiembre 2026 : TRL 1-2 Formulación Teórica : Descubrimiento de problemas, Tech Radar y Mapeo de fuentes de datos
-    Octubre 2026 : TRL 2-3 Prueba de Concepto Analítica : Ingesta STAC API, extracción de series temporales NDMI y cálculo de VPD
-    Noviembre 2026 : TRL 3-4 Prototipo en Entorno de Laboratorio : Entrenamiento de modelo XGBoost con datos históricos CONAFOR/FIRMS
-    Diciembre 2026 : TRL 4 Validación Integrada : Compilación de PWA táctica offline y demostración ante panel evaluador
+    Octubre 2026 : TRL 2 Validado & PoC Readiness : Validación conceptual (Actividad 3), Hipótesis H1-H4, 4 diseños experimentales (READY FOR PoC)
+    Noviembre 2026 : TRL 3 Desarrollo Experimental PoC : Ingesta STAC, matriz Parquet, entrenamiento 5-Fold Spatial Block XGBoost y benchmarking TreeSHAP
+    Diciembre 2026 : TRL 3-4 Prototipo Integrado en Laboratorio : Empaquetado de teselas Tippecanoe, PWA offline táctica y demostración ante panel evaluador
 ```
