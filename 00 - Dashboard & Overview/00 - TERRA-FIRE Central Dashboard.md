@@ -132,7 +132,12 @@ flowchart TD
 - [[Feature Store & Parquet Schema|Feature Store y Fórmulas Matemáticas]]: Formulación de NDMI, SAVI, NBR, VPD y diccionario de datos en Parquet.
 - [[Offline-First Edge Architecture|Arquitectura Edge y Modo Offline]]: Implementación de PWA, Service Workers, teselas vectoriales `.pbf` y almacenamiento SQLite/WASM.
 
-### 8. 📚 Referencias y Recursos
+### 8. 🧪 Ciencia de Datos (Data Engineering Lab - ETL)
+*Diseño e implementación del pipeline ETL reproducible, matriz analítica en Apache Parquet y suite de validación automatizada.*
+- [[Activity 3 - Data Engineering Lab - Report|Actividad 3: Data Engineering Lab - Reporte Oficial]]: Pipeline de ingeniería de datos reproducible de 4 capas, limpieza y perfilado de 101,003 registros de CONAFOR, 657,791 detecciones NASA FIRMS y 17,544 horas de ERA5-Land. Formulación matemática de VPD (Tetens), downscaling adiabático, integración de 18,275 vóxeles vóxel-tiempo, exportación Parquet (0.30 MB) y dictamen **READY FOR ANALYSIS**.
+- **Repositorio Oficial:** [GitHub: AngelGTZ28/TERRA-FIRE](https://github.com/AngelGTZ28/TERRA-FIRE)
+
+### 9. 📚 Referencias y Recursos
 - [[Project References & Bibliography|Bibliografía y Referencias Oficiales]]: Catálogo de literatura científica y fuentes gubernamentales bajo formato APA 7ma edición.
 - [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, PR-AUC, etc.).
 
