@@ -70,6 +70,13 @@ TERRA-FIRE/
 ├── 05 - References & Glossary/                # Bibliografía APA 7ma y glosario técnico
 │   ├── Project References & Bibliography.md
 │   └── Technical Glossary.md
+├── 06 - Scientific Intelligence Report/       # Revisión del estado del arte y brechas tecno-científicas
+│   ├── 01 - Research Problem & Questions.md
+│   ├── 02 - Scientific Search Strategy & Selection.md
+│   ├── 03 - Scientific Evidence & Methodological Comparison.md
+│   ├── 04 - Thematic Literature Map & Evolution.md
+│   ├── 05 - Science-Technology Connection & Gap Analysis.md
+│   └── 06 - Scientific Foundation & Hypothesis.md
 ├── assets/                                    # Matrices visuales, diagramas y tarjetas
 └── TERRA-FIRE Visual Overview.canvas          # Tablero Canvas 2D interactivo
 ```
