@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "612ba03967a270eb",
+        "id": "306468fe788c55a6",
         "type": "tabs",
         "children": [
           {
-            "id": "0c69f21ad3b00293",
+            "id": "5723a5bb8f74797c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "New tab"
             }
           }
         ]
@@ -216,7 +212,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "0c69f21ad3b00293",
+  "active": "5723a5bb8f74797c",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "gemini.md",
