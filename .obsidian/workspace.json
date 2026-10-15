@@ -11,10 +11,14 @@
             "id": "5723a5bb8f74797c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "09 - Data Engineering Lab/Activity 3 - Data Engineering Lab - Report.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Activity 3 - Data Engineering Lab - Report"
             }
           }
         ]
