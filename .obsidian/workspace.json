@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "file:/home/eduardo/Workspaces/TERRA-FIRE/TERRA-FIRE/Work/Activity 6. Pattern Discovery Challenge.md",
+                "file": "Work/Activity 6. Pattern Discovery Challenge.md",
                 "mode": "source",
                 "source": false
               },
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -92,7 +92,7 @@
               "type": "graph",
               "state": {},
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -206,32 +206,40 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false,
       "obsidian-git:Open Git source control": false
     }
   },
   "active": "5723a5bb8f74797c",
   "lastOpenFiles": [
-    "file:/home/eduardo/Downloads/Terra-fire/Work/figures/fig11_thermodynamic_phase_space.png",
+    "Work/figures/fig27_pca_outliers_hotelling.png",
+    "Work/figures/fig26_pca_latent_profiles.png",
+    "Work/figures/fig25_pca_3d_projection.png",
+    "Work/figures/fig24_pca_ecological_regimes.png",
+    "Work/figures/fig23_pca_2d_biplot_ignition.png",
+    "Work/figures/fig22_pca_component_loadings.png",
+    "Work/figures/fig21_pca_explained_variance.png",
+    "Work/figures/fig20_variable_impact_ranking.png",
+    "Work/figures/fig19_multivariate_pairplot.png",
+    "Work/figures/fig18_ignition_probability_regressions.png",
+    "Work/figures/fig17_anthropogenic_topographic_regressions.png",
+    "Work/figures",
+    "Work/variable_impact_analysis.py",
+    "Work/variable_impact_analysis.ipynb",
+    "Work/pattern_discovery_challenge.py",
+    "Work/pattern_discovery_challenge.ipynb",
+    "Work/Activity 6. Pattern Discovery Challenge.md",
+    "Work/Activity 5. Variable Impact Analysis.md",
+    "Work",
     "file:/home/eduardo/Downloads/Terra-fire/Work/Activity 4. Data Intelligence Lab.md",
     "conflict-files-obsidian-git.md",
     "gemini.md",
-    "assets/activity3_page26_img2_xref90.png",
-    "assets/activity3_page25_img2_xref86.png",
-    "assets/activity3_page24_img2_xref82.png",
-    "assets/activity3_page23_img3_xref78.png",
-    "assets/activity3_page23_img2_xref76.png",
-    "assets/activity3_page22_img2_xref72.png",
-    "assets/activity3_page21_img2_xref67.png",
-    "assets/activity3_page20_img2_xref63.png",
-    "assets/activity3_page19_img2_xref59.png",
-    "assets/activity3_page17_img3_xref52.png",
     "09 - Data Engineering Lab/Activity 3 - Data Engineering Lab - Report.md",
     "09 - Data Engineering Lab",
     "08 - Solution Concept Validation/08 - PoC Readiness Decision & Experimental Scope.md",
@@ -256,14 +264,6 @@
     "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
     "06 - Scientific Intelligence Report/04 - Thematic Literature Map & Evolution.md",
-    "06 - Scientific Intelligence Report/03 - Scientific Evidence & Methodological Comparison.md",
-    "06 - Scientific Intelligence Report/02 - Scientific Search Strategy & Selection.md",
-    "06 - Scientific Intelligence Report",
-    "Work/IBM CO0101EN Certificate _ Cognitive Class.pdf",
-    "TERRA-FIRE Visual Overview.canvas",
-    "Untitled.base",
-    "Copia de Activity 1. Problem Discovery Lab.docx.pdf",
-    "Activity 1. Data Opportunity Mapping.docx-1.pdf",
-    "make_module04_05_canvas.py"
+    "TERRA-FIRE Visual Overview.canvas"
   ]
 }
