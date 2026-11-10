@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "gemini.md",
+                "file": "work/Activity 4. Digital Transformation Blueprint.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gemini"
+              "title": "Activity 4. Digital Transformation Blueprint"
             }
           }
         ]
@@ -217,6 +217,11 @@
   },
   "active": "5723a5bb8f74797c",
   "lastOpenFiles": [
+    "gemini.md",
+    "docs/transformation/digital_transformation_blueprint.md",
+    "docs/transformation",
+    "docs",
+    "work/Activity 4. Digital Transformation Blueprint.md",
     "work/Activity 4. Digital Transformation Blueprint.docx.pdf",
     "work",
     "Work/figures/fig27_pca_outliers_hotelling.png",
@@ -239,9 +244,7 @@
     "work",
     "file:/home/eduardo/Downloads/Terra-fire/Work/Activity 4. Data Intelligence Lab.md",
     "conflict-files-obsidian-git.md",
-    "gemini.md",
     "09 - Data Engineering Lab/Activity 3 - Data Engineering Lab - Report.md",
-    "09 - Data Engineering Lab",
     "08 - Solution Concept Validation/08 - PoC Readiness Decision & Experimental Scope.md",
     "08 - Solution Concept Validation/07 - Multi-Dimensional Conceptual Assessment.md",
     "08 - Solution Concept Validation/06 - Experimental Design & Validation Protocols.md",
@@ -250,10 +253,8 @@
     "08 - Solution Concept Validation/03 - Critical Assumptions & Research Questions.md",
     "08 - Solution Concept Validation/02 - Conceptual Solution Model & Component Flow.md",
     "08 - Solution Concept Validation/01 - Solution Concept & System Architecture.md",
-    "08 - Solution Concept Validation",
     "file:/home/eduardo/Downloads/Terra-fire/Work/Activity 3. Solution Concept Validation.md",
     "file:/home/eduardo/Downloads/Activity 3 - Data Engineering Lab - Report.md",
-    "split.py",
     "07 - Data Acquisition Strategy/06 - Acquisition Plan & Readiness Decision.md",
     "07 - Data Acquisition Strategy/05 - Selection & Integration Feasibility.md",
     "07 - Data Acquisition Strategy/04 - Governance & Traceability.md",
@@ -262,7 +263,6 @@
     "07 - Data Acquisition Strategy/01 - Data Requirements.md",
     "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
-    "06 - Scientific Intelligence Report/04 - Thematic Literature Map & Evolution.md",
     "TERRA-FIRE Visual Overview.canvas"
   ]
 }
