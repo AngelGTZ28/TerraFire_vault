@@ -11,10 +11,14 @@
             "id": "5723a5bb8f74797c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "gemini.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "gemini"
             }
           }
         ]
@@ -95,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 206.5
   },
   "right": {
     "id": "86fcb09bcc756939",
@@ -213,6 +217,8 @@
   },
   "active": "5723a5bb8f74797c",
   "lastOpenFiles": [
+    "work/Activity 4. Digital Transformation Blueprint.docx.pdf",
+    "work",
     "Work/figures/fig27_pca_outliers_hotelling.png",
     "Work/figures/fig26_pca_latent_profiles.png",
     "Work/figures/fig25_pca_3d_projection.png",
@@ -223,7 +229,6 @@
     "Work/figures/fig20_variable_impact_ranking.png",
     "Work/figures/fig19_multivariate_pairplot.png",
     "Work/figures/fig18_ignition_probability_regressions.png",
-    "Work/figures/fig17_anthropogenic_topographic_regressions.png",
     "Work/figures",
     "Work/variable_impact_analysis.py",
     "Work/variable_impact_analysis.ipynb",
@@ -231,7 +236,7 @@
     "Work/pattern_discovery_challenge.ipynb",
     "Work/Activity 6. Pattern Discovery Challenge.md",
     "Work/Activity 5. Variable Impact Analysis.md",
-    "Work",
+    "work",
     "file:/home/eduardo/Downloads/Terra-fire/Work/Activity 4. Data Intelligence Lab.md",
     "conflict-files-obsidian-git.md",
     "gemini.md",
@@ -255,7 +260,6 @@
     "07 - Data Acquisition Strategy/03 - Coverage & Quality Assessment.md",
     "07 - Data Acquisition Strategy/02 - Candidate Dataset Inventory.md",
     "07 - Data Acquisition Strategy/01 - Data Requirements.md",
-    "07 - Data Acquisition Strategy",
     "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
     "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
     "06 - Scientific Intelligence Report/04 - Thematic Literature Map & Evolution.md",
