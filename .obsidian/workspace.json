@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Activity 4. Digital Transformation Blueprint.md",
+                "file": "13 - Digital Transformation Blueprint/Activity 4. Digital Transformation Blueprint.md",
                 "mode": "source",
                 "source": false
               },
@@ -215,13 +215,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f695df64c2bcc93d",
+  "active": "5723a5bb8f74797c",
   "lastOpenFiles": [
+    "09 - Data Engineering Lab/Activity 3 - Data Engineering Lab - Report.md",
+    "Work/Activity 4. Digital Transformation Blueprint.md",
+    "13 - Digital Transformation Blueprint/Activity 4. Digital Transformation Blueprint.md",
+    "13 - Digital Transformation Blueprint",
+    "02 - Disruptive Technologies (Future Exploration)/07 - Digital Transformation Blueprint.md",
     "gemini.md",
     "docs/transformation/digital_transformation_blueprint.md",
     "docs/transformation",
     "docs",
-    "Work/Activity 4. Digital Transformation Blueprint.md",
     "Work/Activity 4. Digital Transformation Blueprint.docx.pdf",
     "Work",
     "Work/figures/fig27_pca_outliers_hotelling.png",
@@ -241,10 +245,8 @@
     "Work/pattern_discovery_challenge.ipynb",
     "Work/Activity 6. Pattern Discovery Challenge.md",
     "Work/Activity 5. Variable Impact Analysis.md",
-    "Work",
     "file:/home/eduardo/Downloads/Terra-fire/Work/Activity 4. Data Intelligence Lab.md",
     "conflict-files-obsidian-git.md",
-    "09 - Data Engineering Lab/Activity 3 - Data Engineering Lab - Report.md",
     "08 - Solution Concept Validation/08 - PoC Readiness Decision & Experimental Scope.md",
     "08 - Solution Concept Validation/07 - Multi-Dimensional Conceptual Assessment.md",
     "08 - Solution Concept Validation/06 - Experimental Design & Validation Protocols.md",
@@ -261,8 +263,6 @@
     "07 - Data Acquisition Strategy/03 - Coverage & Quality Assessment.md",
     "07 - Data Acquisition Strategy/02 - Candidate Dataset Inventory.md",
     "07 - Data Acquisition Strategy/01 - Data Requirements.md",
-    "06 - Scientific Intelligence Report/06 - Scientific Foundation & Hypothesis.md",
-    "06 - Scientific Intelligence Report/05 - Science-Technology Connection & Gap Analysis.md",
     "TERRA-FIRE Visual Overview.canvas"
   ]
 }

@@ -7,7 +7,7 @@ authors:
   - "Angel Emilio Gutierrez Lozano (4341)"
   - "Emiliano Betanzos Valtierra (4795)"
 advisor: "Dr. Sergio Valadez Godínez"
-trl_level: "TRL 2 Validated -> Ready for PoC (TRL 3)"
+trl_level: "TRL 3 Validated -> READY FOR SEGMENTATION & READY FOR TRANSFORMATION (9.43/10)"
 lead_time: "48-72 Horas Pre-Ignición"
 resolution: "10-20 Metros (Copernicus Sentinel-2)"
 tags:
@@ -16,25 +16,29 @@ tags:
   - terra-fire
   - system-architecture
   - poc-readiness
+  - digital-transformation
 ---
 
 # 🛰️ TERRA-FIRE: Panel Central de Control & Mapa de Contenido (MOC)
 
 > [!tip] Navegación Rápida
-> Este panel es el centro neurálgico de la bóveda. Conecta los pilares académicos del cuatrimestre Sep-Dic 2026 con la especificación técnica de la plataforma **TERRA-FIRE**. Incluye la validación completa de concepto (**Actividad 3: READY FOR PoC**). También puedes abrir [[TERRA-FIRE Visual Overview.canvas|el Lienzo Visual Canvas]] para una experiencia en 2D.
+> Este panel es el centro neurálgico de la bóveda. Conecta los pilares académicos del cuatrimestre Sep-Dic 2026 con la especificación técnica, la inteligencia empírica de datos (`matrix_v1.parquet`, $N = 18,275$) y el **Digital Transformation Blueprint** de la plataforma **TERRA-FIRE**.
+> - **Ciencia de Datos (Actividades 3, 4, 5 y 6 Completadas):** Dictamen **`READY FOR SEGMENTATION`** (reducción dimensional PCA $12 \to 3$ reteniendo $87.87\%$ de varianza; descubrimiento del **Cuadrante IV Piro-Antropogénico** con $68.61\%$ de los incendios).
+> - **Tecnologías Disruptivas (Actividad 4 Completada):** Dictamen **`READY FOR TRANSFORMATION`** (**Puntaje: 9.43 / 10.0**).
+> - También puedes abrir [[TERRA-FIRE Visual Overview.canvas|el Lienzo Visual Canvas]] para una experiencia en 2D.
 
 ---
 
 ## 📌 Métricas y Parámetros Operativos Clave
 
-| Métrica / Parámetro                     | Valor Objetivo        | Justificación Técnica                                                                   |
+| Métrica / Parámetro                     | Valor Objetivo / Validado | Justificación Técnica y Empírica                                                                   |
 | :-------------------------------------- | :-------------------- | :-------------------------------------------------------------------------------------- |
-| **Nivel de Madurez Tecnológica**        | **TRL 2 Validado ➔ TRL 3** | Concepto formalmente validado con 4 hipótesis ($H_1$–$H_4$); estatus **READY FOR PoC**. |
-| **Ventana de Anticipación (Lead Time)** | **48 a 72 Horas**     | Tiempo necesario para movilización preventiva de brigadas y moratorias de quema.        |
+| **Nivel de Madurez Tecnológica**        | **TRL 3 Validado** | Pipeline ETL, Feature Store Parquet, 12 regresiones OLS y PCA ($12 \to 3$) validados experimentalmente. |
+| **Estatus de Transformación Digital**   | **READY FOR TRANSFORMATION (9.43/10)** | Blueprint socio-técnico completo: protocolo `SOP-72H`, Carta Ejidal No Punitiva, ADKAR y Roadmap de 5 etapas. |
+| **Ventana de Anticipación (Lead Time)** | **48 a 72 Horas**     | Tiempo necesario para movilización preventiva de brigadas (`SOP-72H`) y diferimiento de quemas agrícolas. |
 | **Resolución Espacial**                 | **10 a 20 Metros**    | Vóxeles basados en Copernicus Sentinel-2 MSI para capturar micro-cañadas y laderas.     |
-| **Cadencia Temporal**                   | **Diaria / 5 Días**   | Reanálisis horario ERA5-Land (downscaling) + reflectancia orbital Sentinel cada 5 días. |
-| **Conectividad en Campo**               | **0% (100% Offline)** | PWA con almacenamiento local SQLite/WASM y teselas vectoriales Tippecanoe (<12 MB).     |
-| **Causa Raíz Atendida**                 | **>80% Incendios**    | Quemas agropecuarias (roza y quema) que escapan de control por cambio microclimático (VPD). |
+| **Conectividad en Campo**               | **0% (100% Offline)** | PWA con almacenamiento local `IndexedDB` / SQLite WASM y teselas vectoriales Tippecanoe (`< 12 MB`).     |
+| **Causa Raíz Empíricamente Probada**    | **63.58% Pastizal / 420m Agro** | Los incendios ocurren a mediana de $420\text{ m}$ de parcelas agrícolas ($\Delta = -60.53\%, p < 10^{-30}$) y el $68.61\%$ se concentra en el **Cuadrante IV de PCA**. |
 
 ---
 
@@ -45,27 +49,27 @@ flowchart TD
     subgraph PI3["📘 Proyecto Integrador III"]
         P1["Descubrimiento del Problema"] --> P2["Empatía: Ejidatarios y Brigadistas"]
         P2 --> P3["Pain Points: Desconexión y Ceguera de Datos"]
-        P3 --> P4["Concepto TERRA-FIRE & TRL 1-2"]
+        P3 --> P4["Validación Conceptual TRL 2 -> TRL 3"]
     end
 
     subgraph TD["⚡ Tecnologías Disruptivas"]
-        T1["Reto Nacional SECIHTI Eje 4"] --> T2["Tech Radar: Radar Satelital + ML"]
+        T1["Reto Nacional SECIHTI Eje 4"] --> T2["Observatorio Global & Tech Radar"]
         T2 --> T3["Convergencia AI + GIS + Edge"]
-        T3 --> T4["Escenarios Prospectivos 2026-2036"]
+        T3 --> T4["Digital Transformation Blueprint (Act. 4)\nSOP-72H + ADKAR + Semáforo NOM-015"]
     end
 
     subgraph CD["🔬 Ciencia de Datos"]
-        D1["Big Data 5Vs & Fuentes Satelitales"] --> D2["Features: NDMI, SAVI, VPD, DEM"]
-        D2 --> D3["Ingeniería de Características & Parquet"]
-        D3 --> D4["Mitigación de Riesgos & Desbalance"]
+        D1["Act. 3: Data Engineering Lab (Parquet 18,275 filas)"] --> D2["Act. 4: Data Intelligence Lab (EDA & Welch t)"]
+        D2 --> D3["Act. 5: Variable Impact Analysis (OLS & VIF)"]
+        D3 --> D4["Act. 6: Pattern Discovery (PCA 12->3 & Cuadrante IV)"]
     end
 
-    P4 --> TF["🔥 TERRA-FIRE Engine"]
+    P4 --> TF["🔥 TERRA-FIRE Socio-Technical Engine"]
     T4 --> TF
     D4 --> TF
 
-    TF --> OUT1["📱 PWA Táctica Offline (Brigadas & Ejidatarios)"]
-    TF --> OUT2["🖥️ Dashboard Predictivo 72h (CONAFOR & Protección Civil)"]
+    TF --> OUT1["📱 PWA Táctica Offline & Semáforo Ejidal (Brigadas & Ejidatarios)"]
+    TF --> OUT2["🖥️ Despacho Preventivo SOP-72H & TreeSHAP (CONAFOR & Protección Civil)"]
 ```
 
 ---
@@ -80,13 +84,16 @@ flowchart TD
 - [[04 - Ideation, HMW & Concept Evaluation|04. Ideación, Preguntas HMW y Selección de Concepto]]: Preguntas How Might We, matriz Impacto vs Factibilidad y ponderación multicriterio.
 - [[05 - Solution Concept & TRL Assessment|05. Concepto de Solución TERRA-FIRE y Evaluación TRL 1-2]]: Definición formal de TERRA-FIRE, principios teóricos y plan de maduración TRL.
 
-### 2. ⚡ Tecnologías Disruptivas (Future Challenge Exploration)
-*Prospectiva tecnológica a 10 años, radar de tecnologías emergentes, convergencia y análisis ético.*
+### 2. ⚡ Tecnologías Disruptivas (Future Exploration & Digital Transformation)
+*Prospectiva tecnológica a 10 años, observatorio de innovación, convergencia, ética y el Blueprint de Transformación Digital.*
 - [[01 - National Challenge & Strategic Context|01. Reto Nacional y Contexto Estratégico]]: Alineación al Eje Estratégico 4 de SECIHTI, limitaciones del SPPIF/FWI y Diagrama de Ishikawa de causa raíz.
 - [[02 - Industrial Evolution & Tech Radar|02. Evolución Industrial y Tech Radar]]: De la Industria 1.0 a 5.0 en el sector forestal y radar tecnológico (Adopt, Trial, Assess, Hold).
 - [[03 - Disruptive Convergence|03. Convergencia Disruptiva]]: Sinergia entre IA, Teledetección Orbital, Redes Edge y Computación en la Nube.
 - [[04 - Future Scenarios 2026-2036|04. Escenarios Futuros 2026–2036]]: Análisis prospectivo: Sierra Quemada (pesimista), Paneles Desconectados (incremental) y Resiliencia Cognitiva (transformacional).
 - [[05 - Impact Analysis & Ethics|05. Análisis de Impacto y Consideraciones Éticas]]: Evaluación multidimensional (social, económica, ambiental, regulatoria) y soberanía de datos ejidales.
+- [[06 - Global Innovation Observatory|06. Activity 2: Global Innovation Observatory]]: Vigilancia tecnológica global, triangulación científica/mercado y selección del stack convergente.
+- [[07 - Digital Transformation Blueprint|07. Activity 4: Digital Transformation Blueprint]]: Evaluación del estado actual, oportunidades, diseño de estado futuro (`SOP-72H`, Semáforo NOM-015, Carta No Punitiva), brechas de capacidad, estrategia de adopción de stakeholders, gestión del cambio (Prosci ADKAR + Kotter), hoja de ruta de 5 etapas y dictamen **`READY FOR TRANSFORMATION (9.43/10)`**.
+  - *Versión completa para entrega:* [[Activity 4. Digital Transformation Blueprint]]
 
 ### 3. 🔬 Ciencia de Datos (Data Opportunity Mapping)
 *Arquitectura de datos masivos, catálogo satelital, ingeniería de variables y diseño de dataset para Machine Learning.*
@@ -132,49 +139,38 @@ flowchart TD
 - [[Feature Store & Parquet Schema|Feature Store y Fórmulas Matemáticas]]: Formulación de NDMI, SAVI, NBR, VPD y diccionario de datos en Parquet.
 - [[Offline-First Edge Architecture|Arquitectura Edge y Modo Offline]]: Implementación de PWA, Service Workers, teselas vectoriales `.pbf` y almacenamiento SQLite/WASM.
 
-### 8. 🧪 Ciencia de Datos (Data Engineering Lab - ETL)
-*Diseño e implementación del pipeline ETL reproducible, matriz analítica en Apache Parquet y suite de validación automatizada.*
-- [[Activity 3 - Data Engineering Lab - Report|Actividad 3: Data Engineering Lab - Reporte Oficial]]: Pipeline de ingeniería de datos reproducible de 4 capas, limpieza y perfilado de 101,003 registros de CONAFOR, 657,791 detecciones NASA FIRMS y 17,544 horas de ERA5-Land. Formulación matemática de VPD (Tetens), downscaling adiabático, integración de 18,275 vóxeles vóxel-tiempo, exportación Parquet (0.30 MB) y dictamen **READY FOR ANALYSIS**.
-- **Repositorio Oficial:** [GitHub: AngelGTZ28/TERRA-FIRE](https://github.com/AngelGTZ28/TERRA-FIRE)
+### 8. 🧪 Laboratorios Empíricos de Ciencia de Datos (Actividades 3, 4, 5 y 6)
+*Ejecución analítica sobre la matriz espaciotemporal validada `terra_fire_spatiotemporal_matrix_v1.parquet` ($18,275 \times 22$).*
+- [[Activity 3 - Data Engineering Lab - Report|Actividad 3: Data Engineering Lab - Reporte Oficial]]: Pipeline ETL reproducible de 4 capas, limpieza de 101,003 registros de CONAFOR, 657,791 detecciones NASA FIRMS y 17,544 horas de ERA5-Land. Exportación Parquet (0.30 MB, 0% nulos) y dictamen **`READY FOR ANALYSIS`**.
+- [[Activity 4. Data Intelligence Lab|Actividad 4: Data Intelligence Lab - Reporte Oficial]]: Estadística descriptiva, pruebas $t$ de Welch y 12 tableros visuales (`fig01`–`fig12`). Demostración empírica del gatillo antrópico (`dist_agri_m` mediana $420\text{ m}$ vs $1,200\text{ m}$), dominancia de *Pastizal Inducido* ($63.58\%$) y umbral termodinámico ($VPD > 2.0\text{ kPa}$). Dictamen **`READY FOR ADVANCED ANALYSIS`**.
+- [[Activity 5. Variable Impact Analysis|Actividad 5: Variable Impact Analysis - Reporte Oficial]]: Matrices de correlación Pearson/Spearman, 12 modelos de regresión OLS (`statsmodels`), diagnóstico de multicolinealidad VIF (poda de `nbr` con $\text{VIF} > 100$ y `wind_v10_mean`), demostración de confusión espacial de valle ($R^2 = 0.9000$) y jerarquía de impacto (`fig13`–`fig20`). Dictamen **`READY FOR PATTERN DISCOVERY`**.
+- [[Activity 6. Pattern Discovery Challenge|Actividad 6: Pattern Discovery Challenge - Reporte Oficial]]: Reducción de dimensionalidad **PCA ($12 \to 3$ componentes ortogonales: `PC1`, `PC2`, `PC3`)** reteniendo el **87.87% de la varianza** ($75.0\%$ compresión, $\text{VIF} = 1.00$). Descubrimiento del **Cuadrante IV Piro-Antropogénico** ($68.61\%$ de todos los incendios, amplificación de riesgo $28.1\times$), lazo de histéresis estacional y aislamiento de outliers de monzón mediante $T^2$ de Hotelling (`fig21`–`fig27`). Dictamen **`READY FOR SEGMENTATION`**.
 
 ### 9. 📚 Referencias y Recursos
-- [[Project References & Bibliography|Bibliografía y Referencias Oficiales]]: Catálogo de literatura científica y fuentes gubernamentales bajo formato APA 7ma edición.
-- [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, PR-AUC, etc.).
+- [[Project References & Bibliography|Bibliografía y Referencias Oficiales]]: Catálogo de literatura científica, transformación digital, gestión del cambio y fuentes gubernamentales bajo formato APA 7ma edición.
+- [[Technical Glossary|Glosario de Términos]]: Definición clara de siglas y conceptos técnicos (FWI, NDMI, VPD, TRL, COG, STAC, SHAP, PR-AUC, PCA, ADKAR, SOP-72H, etc.).
 
 ---
 
-## 🔄 Flujo Operativo del Sistema TERRA-FIRE
+## 🔄 Flujo Operativo Socio-Técnico del Sistema TERRA-FIRE (To-Be)
 
 ```mermaid
 sequenceDiagram
     autonumber
     actor C as Constelación Copernicus & ECMWF
-    participant ETL as Pipeline Cloud Ingest & Preprocessing
-    participant ML as Motor ML XGBoost + SHAP
+    participant ETL as Pipeline Cloud Ingest & Preprocessing (02:00 UTC)
+    participant ML as Motor ML XGBoost + TreeSHAP
     participant VEC as Generador Teselas Vectoriales (Tippecanoe)
-    actor B as Brigadista / Ejidatario (Offline PWA)
-    actor D as Despacho CONAFOR / Protección Civil
+    actor D as Despacho CONAFOR / Protección Civil (SOP-72H)
+    actor B as Brigadista / Ejidatario (Offline PWA & Semáforo)
 
-    C->>ETL: Descarga de bandas Sentinel-2 (L2A) y ERA5-Land Reanalysis
-    ETL->>ETL: Enmascaramiento de nubes, downscaling adiabático de VPD y alineación 20m
+    C->>ETL: Descarga de bandas Sentinel-2 (L2A), Sentinel-1 SAR y ERA5-Land
+    ETL->>ETL: Downscaling adiabático de VPD, cálculo de NDMI y proyección PCA (PC1-PC3)
     ETL->>ML: Matriz tabular unificada (.parquet)
-    ML->>ML: Inferencia P(Fuego en 48-72h) y cálculo de drivers locales (TreeSHAP)
-    ML->>VEC: Generación de polígonos de riesgo y capas vectoriales
-    VEC->>B: Sincronización previa (Wi-Fi base) en caché IndexedDB / SQLite WASM
-    VEC->>D: Actualización de mapa táctico nacional (06:00 AM diario)
-    Note over B: Operación 100% desconectada en sierra profunda
-    B->>B: Consulta de corredores de escape y semáforo de quema agrícola
-```
-
----
-
-## 📅 Hoja de Ruta del Proyecto (Cuatrimestre Sep–Dic 2026)
-
-```mermaid
-timeline
-    title Hoja de Ruta de Desarrollo TERRA-FIRE
-    Septiembre 2026 : TRL 1-2 Formulación Teórica : Descubrimiento de problemas, Tech Radar y Mapeo de fuentes de datos
-    Octubre 2026 : TRL 2 Validado & PoC Readiness : Validación conceptual (Actividad 3), Hipótesis H1-H4, 4 diseños experimentales (READY FOR PoC)
-    Noviembre 2026 : TRL 3 Desarrollo Experimental PoC : Ingesta STAC, matriz Parquet, entrenamiento 5-Fold Spatial Block XGBoost y benchmarking TreeSHAP
-    Diciembre 2026 : TRL 3-4 Prototipo Integrado en Laboratorio : Empaquetado de teselas Tippecanoe, PWA offline táctica y demostración ante panel evaluador
+    ML->>ML: Inferencia P(Fuego en 48-72h) y cálculo de Cédulas Locales TreeSHAP
+    ML->>VEC: Compilación de teselas vectoriales (.pbf < 12 MB)
+    VEC->>D: Boletín de Inteligencia 06:00 AM -> Pre-posicionamiento en Cuadrante IV (SOP-72H)
+    VEC->>B: Sincronización de 15s en Kiosco Wi-Fi Municipal/Ejidal (IndexedDB)
+    Note over B: Operación 100% desconectada en sierra profunda y acuerdo No Punitivo
+    B->>B: Consulta de Semáforo NOM-015 (Verde/Amarillo/Rojo) y rutas de escape en cañadas
 ```

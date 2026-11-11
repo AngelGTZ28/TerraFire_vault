@@ -6,75 +6,64 @@ authors:
   - "Angel Emilio Gutierrez Lozano (4341)"
   - "Emiliano Betanzos Valtierra (4795)"
 advisor: "Dr. Sergio Valadez Godínez"
-date: "2026-10-12"
-status: "TRL 2 Validated -> Ready for PoC (TRL 3)"
+date: "2026-11-10"
+status: "TRL 3 Validated -> READY FOR SEGMENTATION & READY FOR TRANSFORMATION (9.43/10)"
 tags:
   - executive-summary
   - pitch
   - terra-fire
-  - trl-2
   - trl-3
-  - poc-readiness
+  - digital-transformation
+  - pattern-discovery
 ---
 
 # 📄 Resumen Ejecutivo: Proyecto TERRA-FIRE
 
 > [!abstract] Declaración de Propósito
-> **TERRA-FIRE** es un sistema inteligente de pronóstico de riesgo de incendios forestales e interfaces tácticas sin conexión a internet, concebido para empoderar a ejidatarios y brigadistas comunitarios en México mediante alertas microclimáticas hiperlocales generadas 48 a 72 horas antes de la ignición.
+> **TERRA-FIRE** es un ecosistema socio-técnico de pronóstico hiperlocal de incendios forestales (10–20 m) y cartografía táctica 100% offline, concebido para empoderar a ejidatarios, brigadistas comunitarios, CONAFOR y Protección Civil mediante alertas microclimáticas explicables generadas **48 a 72 horas antes de la ignición**.
 
 ---
 
-## 1. El Diagnóstico Crítico de la Realidad Mexicana
+## 1. Diagnóstico Crítico y Evidencia Empírica en México (`matrix_v1.parquet`)
 
-En México, la gestión gubernamental del fuego opera históricamente bajo un **paradigma reactivo**:
-1. **Detección Tardía:** Las plataformas oficiales (como el sistema SPPIF de CONAFOR o los satélites térmicos NASA FIRMS) detectan el fuego entre 3 y 12 horas después de que ya inició, cuando las llamas ya consumieron hectáreas y cobraron fuerza en cañadas empinadas.
-2. **Causa Raíz Desatendida:** Más del **80% de los incendios forestales catastróficos** se originan en quemas agrícolas tradicionales (roza y quema) que se salen de control debido a ráfagas imprevistas de viento y deshidratación súbita de la vegetación.
-3. **Ceguera de Datos en Campo:** En los ecosistemas forestales y montañosos de México existe menos de 1 estación meteorológica por cada 2,500 km². Los campesinos y brigadistas deben tomar decisiones de vida o muerte basándose en la intuición visual o en calendarios ancestrales que el cambio climático ha vuelto obsoletos.
-4. **La Brecha de Conectividad:** Las zonas con mayor riesgo forestal carecen por completo de cobertura celular o red 4G/5G. Las aplicaciones web convencionales colapsan en el campo.
+A través del análisis programático de **$N = 18,275$ observaciones diarias vóxel-tiempo** (25 nodos regionales en Aguascalientes y la Reserva Biológica Sierra Fría durante 2023–2024), el proyecto **TERRA-FIRE** demostró estadísticamente las fallas del paradigma reactivo tradicional:
+
+1. **Detección Tardía (3 a 12 Horas Post-Ignición):** Las plataformas oficiales (SPPIF de CONAFOR a resolución de $\ge 10\text{ km}$ y satélites térmicos NASA FIRMS VIIRS/MODIS) alertan cuando el fuego ya escapó hacia cañadas escarpadas.
+2. **Gatillo Antrópico Agrícola Probado ($p < 10^{-30}$):** Las ventanas de ignición ocurren a una distancia mediana de **$420.0\text{ m}$** de bordes agrícolas ($\Delta = -60.53\%$ frente a $1,200.0\text{ m}$ en condiciones base) y **$150.0\text{ m}$** de caminos rurales ($\Delta = -62.32\%$). El **63.58% de todos los incendios** ($557 / 876$) inician en **Pastizal Inducido** por escapes de *roza y quema*.
+3. **Pre-Acondicionamiento Termodinámico y Desecación:** Previo a la ignición, el Déficit de Presión de Vapor ($VPD_{max}$) se incrementa **+16.38%** (superando el umbral crítico de $2.0\text{ kPa}$), la humedad relativa mínima cae a una mediana de **18.0%** y el índice de humedad foliar ($NDMI$) se desploma **-42.50%**.
+4. **Convergencia Piro-Antropogénica en el Cuadrante IV de PCA ($28.1\times$ Riesgo):** Al comprimir las 12 variables de alto y mediano impacto en **3 Componentes Principales ortogonales (`PC1`, `PC2`, `PC3`)** que retienen el **87.87% de la varianza total**, el **Cuadrante IV ($\text{PC1} > 0 \land \text{PC2} \le 0$: Interfaz Agrícola Seca)** concentra el **68.61% de todos los incendios forestales** ($601 / 876$) con una tasa de ignición de **11.54%** (y **23.34%** en el Ápice Extremo).
+5. **Brecha de Conectividad de Última Milla:** Más del **85% de los corredores montañosos carecen de cobertura 4G/5G**, inutilizando las aplicaciones web convencionales en el frente de combate.
 
 ---
 
-## 2. La Propuesta de Valor Disruptiva de TERRA-FIRE
-
-TERRA-FIRE resuelve esta fricción mediante la convergencia de tecnologías abiertas y maduras:
+## 2. La Propuesta de Valor y Transformación Digital de TERRA-FIRE
 
 ```text
-Copernicus Sentinel-2 (Reflectancia Óptica 10m) 
-            + 
-ECMWF ERA5-Land (Déficit de Presión de Vapor - VPD)
-            + 
-Modelo Predictivo XGBoost (Calibrado para desbalance extremo)
-            + 
-PWA Táctica Offline (MapLibre Vector Tiles + SQLite/WASM)
-            = 
-PREVENCIÓN HIPERLOCAL PRE-IGNICIÓN A COSTE CERO DE SENSORES
+Copernicus Sentinel-2 (Reflectancia 10–20m) + Sentinel-1 SAR (Todo Clima)
+                                + 
+ECMWF ERA5-Land (VPD Downscaled Adiabáticamente a -0.0065 °C/m)
+                                + 
+Motor Predictivo XGBoost + Cédulas Explicables TreeSHAP (< 5 ms)
+                                + 
+PWA Táctica Offline (Teselas Vectoriales Tippecanoe .pbf < 12 MB)
+                                +
+Gobernanza Socio-Técnica (Protocolo SOP-72H + Carta Ejidal No Punitiva)
+                                = 
+PREVENCIÓN HIPERLOCAL 48–72H PRE-IGNICIÓN A COSTE CERO DE SENSORES (ZERO-CAPEX)
 ```
 
-### Principales Diferenciadores:
-- **Cero Inversión en Hardware (Zero CapEx):** No requiere instalar ni mantener costosas redes de sensores físicos en la sierra (las cuales sufren vandalismo, fallas de batería y desconexión). Aprovecha la flota satelital de acceso abierto Copernicus y reanálisis global ECMWF.
-- **Granularidad de 10 a 20 Metros:** En lugar de predicciones climáticas regionales toscas de 10 km, evalúa la humedad del dosel arbóreo (NDMI) y la evaporación a nivel de cañada o parcela.
-- **Ventana Preventiva Real (48–72 Horas):** Permite emitir moratorias comunitarias de quema agrícola antes de que se produzca una chispa y pre-posicionar brigadas y pipas en puntos neurálgicos.
-- **Arquitectura Offline-First:** La Progressive Web App permite almacenar en caché municipal las teselas vectoriales ligeras (`.pbf`) y scores de riesgo, permitiendo navegación GPS en campo sin señal de red.
-- **Inteligencia Artificial Explicable (XAI):** Uso de algoritmos TreeSHAP para explicar al despachador técnico el porqué de cada nivel de alerta (ejemplo: pendiente pronunciada + anomalía de VPD + deshidratación de biomasa).
+### Pilares del Blueprint de Transformación Digital (Actividad 4 — Tecnologías Disruptivas):
+- **Semáforo Visual de Quema Segura (NOM-015) y Carta No Punitiva:** Interfaz de 3 colores (Verde / Amarillo / Rojo) respaldada por acuerdos de *Asamblea Ejidal* que garantizan **cero multas**, logrando que el campesino difiera quemas voluntariamente cuando $VPD > 2.0\text{ kPa}$.
+- **Protocolo de Despacho Preventivo (`SOP-72H`):** Boletín automatizado a las 06:00 AM con **Cédulas de Riesgo Local TreeSHAP** que permite a CONAFOR y Protección Civil pre-posicionar brigadas y pipas 48 horas antes en bordes del Cuadrante IV.
+- **Red de *"Promotores Digitales Forestales"* y Kioscos Wi-Fi:** Jóvenes locales acreditados y puntos de sincronización comunitaria que actualizan el mapa offline en `< 15 segundos`.
+- **Cero Inversión en Hardware (Zero-CapEx):** Operación estatal completa en la nube por `< $15 USD/mes`, proyectando una **reducción de 30%–50% en escapes agrícolas** y un **ahorro de 25%–40% en horas de vuelo de helicópteros**.
 
 ---
 
-## 3. Impacto Socioecológico Esperado
+## 3. Estado Actual de Madurez y Dictámenes Oficiales (Noviembre 2026)
 
-- **Protección de Vidas:** Disminución drástica del atrapamiento fatal de brigadistas en cañadas al ofrecer mapas de corredores de escape seguros.
-- **Conservación Ecosistémica:** Protección de servicios ambientales críticos (captación de agua, biodiversidad y secuestro de carbono) alineados al **Eje Estratégico 4 de SECIHTI**.
-- **Ahorro Presupuestal:** Reducción sustancial del gasto municipal y federal en horas de vuelo de helicópteros de supresión y maquinaria pesada, reorientando el presupuesto hacia el equipamiento preventivo comunitario.
-- **Gobernanza Comunitaria:** Fortalecimiento del tejido ejidal sin criminalizar la actividad agrícola tradicional, transformando al campesino en el primer vigía preventivo del territorio.
+> [!tip] Veredictos Formales Alcanzados
+> 1. **Ciencia de Datos (Actividades 3, 4, 5 y 6 Completadas):** Estatus **`READY FOR SEGMENTATION`** (TRL 3 Validado; Feature Store Parquet 100% íntegro, 12 regresiones OLS validadas y espacio latente 3D `['PC1', 'PC2', 'PC3']` listo para clustering no supervisado).
+> 2. **Tecnologías Disruptivas (Actividad 4 Completada):** Estatus **`READY FOR TRANSFORMATION`** (**Puntaje compuesto: 9.43 / 10.0**), con estrategia de adopción de stakeholders, plan de gestión del cambio **Prosci ADKAR + Kotter** y hoja de ruta de implementación en 5 etapas (12 meses).
 
----
-
-## 4. Estado de Madurez y Preparación para PoC (Actividad 3)
-
-> [!tip] Veredicto Formal de Preparación (Octubre 2026)
-> Tras la culminación de la **Actividad 3 (Validación del Concepto de Solución)**, el proyecto cuenta con:
-> - **Evaluación Multidimensional:** Calificación unánime de **STRONG** en las 6 dimensiones de ingeniería (Alineación Problema-Solución, Fundamentación Científica, Compatibilidad Tecnológica, Disponibilidad de Datos, Testabilidad y Mensurabilidad).
-> - **Hipótesis Falsables:** 4 hipótesis matemáticas formales ($H_1$ a $H_4$) que evalúan la precisión espacial (PR-AUC $\ge 0.75$), explicabilidad TreeSHAP ($< 5\text{ ms}$), compresión de teselas vectoriales ($< 12\text{ MB}$, $\ge 45\text{ FPS}$) y penetración de nubes con radar Sentinel-1 SAR ($\text{PR-AUC} \ge 0.70$).
-> - **Decisión Oficial:** **READY FOR PoC** — Transición formal hacia **TRL 3 (Desarrollo y Validación Experimental en Laboratorio)**.
-
-*Para detalles exhaustivos, consultar:* [[01 - Solution Concept & System Architecture]] | [[08 - PoC Readiness Decision & Experimental Scope]]
-
+*Para detalles exhaustivos, consultar:* [[00 - TERRA-FIRE Central Dashboard]] | [[07 - Digital Transformation Blueprint]] | [[Activity 6. Pattern Discovery Challenge]]

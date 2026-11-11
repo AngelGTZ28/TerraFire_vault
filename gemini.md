@@ -1,6 +1,6 @@
 # 🧠 TERRA-FIRE: Master Project Memory & Context (`gemini.md`)
 > **AI Assistant Reference Manual & Technical Knowledge Base**  
-> **Last Updated:** October 27, 2026 | **Project Status:** TRL 3 Validated ➔ **READY FOR SEGMENTATION** (Activities 3, 4, 5 & 6 Complete)
+> **Last Updated:** November 10, 2026 | **Project Status:** TRL 3 Validated ➔ **READY FOR SEGMENTATION** (Data Science Act. 3–6 Complete) & **READY FOR TRANSFORMATION** (Disruptive Technologies Act. 4 Blueprint Complete — Score 9.43/10)
 
 ---
 
@@ -8,12 +8,12 @@
 * **Project Name:** **TERRA-FIRE** (Predictive Wildfire Intelligence & Offline Tactical Cartography Engine)
 * **Mission:** Transition Mexico's forest fire management from reactive suppression to anticipatory, micro-territorial (10–20 m) mitigation **48 to 72 hours prior to ignition**.
 * **Target Users:** 
-  1. *Rural ejidatarios & farmers:* Safe agricultural burn advisories (NOM-015-SEMARNAT/AGRICULTURA-2023).
-  2. *Community fire brigades:* 100% offline tactical risk cartography and escape route navigation in remote mountain corridors.
-  3. *CONAFOR & Civil Protection dispatchers:* Anticipatory territorial resource pre-allocation.
-* **Institution:** Universidad Tecnológica El Retoño (UTR) — Aguascalientes, México.
+  1. *Rural ejidatarios & farmers:* Safe agricultural burn advisories (NOM-015-SEMARNAT/AGRICULTURA-2023) via a 3-color Visual Semaphore.
+  2. *Community fire brigades:* 100% offline tactical risk cartography and escape route navigation in remote mountain corridors (`< 12 MB` `.pbf` vector tiles).
+  3. *CONAFOR & Civil Protection dispatchers:* Anticipatory territorial resource pre-allocation (`SOP-72H`) and **TreeSHAP** Local Risk Cards.
+* **Institution:** Universidad Tecnológica El Retoño (UTR BIS) — Aguascalientes, México.
 * **Academic Program:** Information Technologies and Digital Innovation Engineering (`LITD9A`).
-* **Course:** Data Science & Integrative Project III (Sep–Dec 2026).
+* **Courses:** Data Science, Disruptive Technologies & Integrative Project III (Sep–Dec 2026).
 * **Advising Professor:** Dr. Sergio Valadez Godínez.
 * **Engineering Team:** 
   - Angel Emilio Gutierrez Lozano (ID: 4341)
@@ -22,20 +22,20 @@
 ---
 
 ## 🏛️ 2. Architectural Ecosystem & Workspace Directories
-The project ecosystem is organized across peer directories in `/home/eduardo/Workspaces/`:
+The project ecosystem is organized across peer directories in `/home/angel/Workspace/TERRA-FIRE-PROJECT/`:
 
 ```text
-Workspaces/
-├── TERRA-FIRE/TERRA-FIRE/  # 🛠️ Primary GitHub Code Repository (ETL, EDA, Regression, PCA, Notebooks, Work/)
-├── Terra-Fire databases/   # 📦 External Raw Datasets Storage (>72 MB)
+TERRA-FIRE-PROJECT/
+├── TERRA-FIRE/             # 🛠️ Primary GitHub Code Repository (ETL, EDA, Regression, PCA, Notebooks, docs/)
+├── TERRA-FIRE-DATABASES/   # 📦 External Raw Datasets Storage (>72 MB)
 └── TerraFire_vault/        # 📚 Obsidian Knowledge Vault & Official Academic Reports
 ```
 
 ### The 4 Decoupled Computing Layers:
-1. **Layer 1: Project Repository (GitHub):** Source code (`src/`), executable notebooks (`notebooks/`), metadata dictionaries (`metadata/`), visual analytics (`reports/figures/`), deliverable reports (`Work/`), `.gitignore`, `requirements.txt`, small representative samples (`data/sample/`), and compressed Parquet artifacts (`data/processed/`).
+1. **Layer 1: Project Repository (GitHub):** Source code (`src/`), executable notebooks (`notebooks/`), metadata dictionaries (`metadata/`), visual analytics (`reports/figures/`), transformation strategy (`docs/transformation/`), deliverable reports (`work/`), `.gitignore`, `requirements.txt`, small representative samples (`data/sample/`), and compressed Parquet artifacts (`data/processed/`).
 2. **Layer 2: Development Environment (VS Code / Linux Workstation):** Python 3.12+ virtual environment (`.venv`) with pinned scientific dependencies (`pandas`, `pyarrow`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`, `matplotlib`, `seaborn`, `plotly`).
-3. **Layer 3: Data Storage:** Heavy raw tables (>72 MB) stored externally in `Terra-Fire databases/` (excluded from Git).
-4. **Layer 4: Data Processing:** Vectorized in-memory compute infrastructure (Python + Pandas/PyArrow/Statsmodels/Scikit-Learn) using a **Scaled Data Pipeline** architecture (executing full ETL, descriptive statistics, 12-model regression suites, and 12-to-3 PCA dimensionality reduction in <4.0 s).
+3. **Layer 3: Data Storage:** Heavy raw tables (>72 MB) stored externally in `TERRA-FIRE-DATABASES/` (excluded from Git).
+4. **Layer 4: Data Processing:** Vectorized in-memory compute infrastructure (Python + Pandas/PyArrow/Statsmodels/Scikit-Learn) using a **Scaled Data Pipeline** architecture (executing full ETL, descriptive statistics, 12-model regression suites, and 12-to-3 PCA dimensionality reduction in `< 4.0 s`).
 
 ---
 
@@ -43,11 +43,11 @@ Workspaces/
 
 | Dataset | Provider | Records & Size | Storage Path | Ingestion Peculiarities & Mitigations |
 | :--- | :--- | :---: | :--- | :--- |
-| **CONAFOR Historical Fires (2012–2025)** | CONAFOR / SEMARNAT | 101,003 rows<br>(18.6 MB `.xlsx`) | `Terra-Fire databases/CONAFOR_Incendios_2012_2025.xlsx` | • Headers contain corrupted non-ASCII accents (`'Ao'`, `'Herbceo'`).<br>• 48 records have positive longitudes (inverted by $\times -1.0$).<br>• 946 null vegetation rows imputed as `'No Especificado'`.<br>• Strata hectares nulls imputed as `0.0` ha. |
-| **NASA FIRMS VIIRS S-NPP (2023–2024)** | NASA LANCE / FIRMS | 657,791 rows<br>(52.4 MB `.csv`) | `Terra-Fire databases/NASA_FIRMS_VIIRS_SNPP_*.csv` | • `acq_time` is integer (e.g. `820`); zero-padded to `08:20:00` and concatenated with `acq_date` to form UTC timestamp.<br>• Filtered to Mexico bounding box $[14.0, 33.5]^\circ\text{N}, [-118.5, -86.0]^\circ\text{W}$. |
-| **ECMWF ERA5-Land Hourly** | Copernicus C3S | 17,544 rows<br>(0.93 MB `.csv`) | `Terra-Fire databases/ERA5_Land_Hourly_SierraFria_2023_2024.csv` | • **Crucial:** Lines 1–2 contain station metadata; line 3 is blank; table header is at line 4. Must be loaded using `skiprows=3`.<br>• Local time is GMT-6; UTC offset (+6h) added for satellite alignment. |
-| **Copernicus DEM (GLO-30)** | ESA / Airbus | 1°x1° Tile<br>(35.4 MB `.tif`) | `Terra-Fire databases/Copernicus_DEM_GLO30_N22_W103.tif` | • 32-bit float elevation values relative to EGM2008.<br>• Used to compute slope ($0^\circ–90^\circ$), aspect, and lapse-rate thermal downscaling. |
-| **Copernicus Sentinel-2 MSI L2A** | ESA / Microsoft PC | Scene Item<br>(0.03 MB `.json`) | `Terra-Fire databases/Sentinel2_L2A_STAC_Item_*.json` | • Multispectral surface reflectance metadata (B04 Red, B08 NIR, B11 SWIR-1, B12 SWIR-2).<br>• Precomputed tabular biophysical indices (`ndmi`, `savi`, `nbr`) integrated in the Parquet feature store. |
+| **CONAFOR Historical Fires (2012–2025)** | CONAFOR / SEMARNAT | 101,003 rows<br>(18.6 MB `.xlsx`) | `TERRA-FIRE-DATABASES/CONAFOR_Incendios_2012_2025.xlsx` | • Headers contain corrupted non-ASCII accents (`'Ao'`, `'Herbceo'`).<br>• 48 records have positive longitudes (inverted by $\times -1.0$).<br>• 946 null vegetation rows imputed as `'No Especificado'`.<br>• Strata hectares nulls imputed as `0.0` ha. |
+| **NASA FIRMS VIIRS S-NPP (2023–2024)** | NASA LANCE / FIRMS | 657,791 rows<br>(52.4 MB `.csv`) | `TERRA-FIRE-DATABASES/NASA_FIRMS_VIIRS_SNPP_*.csv` | • `acq_time` is integer (e.g. `820`); zero-padded to `08:20:00` and concatenated with `acq_date` to form UTC timestamp.<br>• Filtered to Mexico bounding box $[14.0, 33.5]^\circ\text{N}, [-118.5, -86.0]^\circ\text{W}$. |
+| **ECMWF ERA5-Land Hourly** | Copernicus C3S | 17,544 rows<br>(0.93 MB `.csv`) | `TERRA-FIRE-DATABASES/ERA5_Land_Hourly_SierraFria_2023_2024.csv` | • **Crucial:** Lines 1–2 contain station metadata; line 3 is blank; table header is at line 4. Must be loaded using `skiprows=3`.<br>• Local time is GMT-6; UTC offset (+6h) added for satellite alignment. |
+| **Copernicus DEM (GLO-30)** | ESA / Airbus | 1°x1° Tile<br>(35.4 MB `.tif`) | `TERRA-FIRE-DATABASES/Copernicus_DEM_GLO30_N22_W103.tif` | • 32-bit float elevation values relative to EGM2008.<br>• Used to compute slope ($0^\circ–90^\circ$), aspect, and lapse-rate thermal downscaling. |
+| **Copernicus Sentinel-2 MSI L2A** | ESA / Microsoft PC | Scene Item<br>(0.03 MB `.json`) | `TERRA-FIRE-DATABASES/Sentinel2_L2A_STAC_Item_*.json` | • Multispectral surface reflectance metadata (B04 Red, B08 NIR, B11 SWIR-1, B12 SWIR-2).<br>• Precomputed tabular biophysical indices (`ndmi`, `savi`, `nbr`) integrated in the Parquet feature store. |
 
 ---
 
@@ -91,7 +91,7 @@ $$v_{10} = -(ws_{kmh} / 3.6) \cdot \cos(\theta_{rad}) \quad (\text{meridional, s
 
 ---
 
-## 🔬 6. Empirical Intelligence & Variable Impact Reference (Activities 4, 5 & 6)
+## 🔬 6. Empirical Intelligence & Variable Impact Reference (Data Science Activities 4, 5 & 6)
 
 ### A. Key Group Contrasts (Activity 4 — Data Intelligence Lab)
 - **Anthropogenic Proximity Shift:** `dist_agri_m` drops from a baseline mean of $1,650.7\text{ m}$ (median $1,200\text{ m}$) to **$651.6\text{ m}$** (median **$420\text{ m}$**, $\Delta = -60.53\%, p < 10^{-30}$) during ignitions; `dist_roads_m` drops from median $480\text{ m}$ to **$150\text{ m}$** ($\Delta = -62.32\%$).
@@ -124,67 +124,78 @@ $$v_{10} = -(ws_{kmh} / 3.6) \cdot \cos(\theta_{rad}) \quad (\text{meridional, s
      - `vpd_max_kpa`: $\hat{P}_{ign}(\%) = 0.3326 + 2.33775 \cdot VPD_{max}$ ($R^2 = 0.7816, p = 2.34 \times 10^{-7}$)
      - `soil_moist_mean`: $\hat{P}_{ign}(\%) = 10.5973 - 24.33603 \cdot \theta_{soil}$ ($R^2 = 0.7803, p = 2.47 \times 10^{-7}$)
 
-3. **Variable Impact Classification & Feature Pruning Rules for Future Activities:**
+3. **Variable Impact Classification & Feature Pruning Rules:**
    - **High Impact (7 Quantitative + 1 Categorical — Primary Modeling Core):** `dist_agri_m`, `dist_roads_m`, `temp_2m_max_c`, `rh_2m_min_pct`, `soil_moist_mean`, `vpd_max_kpa`, `ndmi`, and `fuel_type`.
    - **Medium Impact (6 — Include with Spatial Blocking / Non-Linear Trees):** `slope_deg`, `elevation_m`, `vpd_72h_max_kpa`, `precip_72h_sum_mm`, `days_since_rain`, `savi`.
-   - **Low Impact / Prune Candidates (5):**
-     - *Prune `nbr`:* Extreme spectral multicollinearity with `ndmi` ($r = +0.9833, R^2 = 0.9668, \text{VIF} > 100$).
-     - *Prune `wind_v10_mean`:* Non-significant relationship with ignition ($p = 0.621$, 95% CI crosses zero).
-     - *Transform `aspect_rad`:* Convert circular radians to solar southness $-\cos(\text{aspect\_rad})$.
-     - *Reserve `wind_speed_max_kmh` & `wind_u10_mean`:* Use for post-ignition spread modeling rather than pre-ignition probability.
+   - **Low Impact / Prune Candidates (5):** Prune `nbr` ($\text{VIF} > 100$) and `wind_v10_mean` ($p = 0.621$); transform `aspect_rad` to solar southness $-\cos(\text{aspect\_rad})$; reserve `wind_speed_max_kmh` & `wind_u10_mean` for post-ignition spread modeling.
 
 ### C. Principal Component Analysis & Pattern Discovery Reference (Activity 6 — Pattern Discovery Challenge)
 1. **Unified 12-to-3 Spatiotemporal PCA Dimensionality Reduction (`StandardScaler` + `PCA(n_components=3)`):**
-   - **Explicit Dimensionality Reduction ($12 \to 3\text{ Orthogonal Components}$):** Following exploratory Scree Plot inspection (`pca_exploratory = PCA()`), the definitive reduction model `pca_reduced = PCA(n_components=3)` truncates the 12 standardized High & Medium-Impact variables into the reduced DataFrame `X_pca_reduced` of exact dimensions **$18,275 \times 3$ (`['PC1', 'PC2', 'PC3']`)**, achieving a **75.0% reduction in dimensionality while retaining 87.87% of total variance** ($\text{VIF} = 1.000$) under the Kaiser Criterion ($\lambda_k \ge 1.0$), while pruning `PC4` through `PC12` ($\lambda_4 = 0.6421 < 1.0$, $12.13\%$ discarded residual variance).
-   - **Methodological Transparency on Conditional "When Applicable" Image Sections:** Because `terra_fire_spatiotemporal_matrix_v1.parquet` is a tabular spatiotemporal dataset where biophysical (`ndmi`) and topographic (`elevation_m`, `slope_deg`) indices are precomputed continuous numerical columns (and `nbr` was pruned in Activity 5 due to $\text{VIF} > 100$), conditional computer-vision / raw image-processing sections do not apply, maintaining a single unified, rigorous 12-to-3 PCA.
-   - **$\text{PC1}$ ($\lambda_1 = 4.8918, 40.76\%$ variance):** *Atmospheric-Edaphic Desiccation & Drought Stress Continuum* (`vpd_max_kpa` $+0.3900$, `vpd_72h_max_kpa` $+0.3685$, `temp_2m_max_c` $+0.3304$, `days_since_rain` $+0.3033$ vs. `rh_2m_min_pct` $-0.3896$, `soil_moist_mean` $-0.3829$). Separates ignitions with $t = +24.02, p = 3.82 \times 10^{-101}$, Cohen's $d = +0.760$.
-   - **$\text{PC2}$ ($\lambda_2 = 4.0088, 33.41\%$ variance):** *Orographic Altitude vs. Anthropogenic Agricultural Valley Interface* (`slope_deg` $+0.4592$, `dist_agri_m` $+0.4587$, `elevation_m` $+0.4560$, `dist_roads_m` $+0.4558$). Separates ignitions with $t = -29.05, p = 4.93 \times 10^{-140}$, Cohen's $d = -0.738$.
+   - Compresses the 12 standardized High & Medium-Impact variables into `X_pca_reduced` ($18,275 \times 3$ `['PC1', 'PC2', 'PC3']`), achieving **75.0% dimensionality reduction while retaining 87.87% of total variance** ($\text{VIF} = 1.000$) under the Kaiser Criterion ($\lambda_k \ge 1.0$).
+   - **$\text{PC1}$ ($\lambda_1 = 4.8918, 40.76\%$ variance):** *Atmospheric-Edaphic Desiccation & Drought Stress Continuum* (`vpd_max_kpa` $+0.3900$, `vpd_72h_max_kpa` $+0.3685$, `temp_2m_max_c` $+0.3304$, `days_since_rain` $+0.3033$ vs. `rh_2m_min_pct` $-0.3896$, `soil_moist_mean` $-0.3829$). Cohen's $d = +0.760$.
+   - **$\text{PC2}$ ($\lambda_2 = 4.0088, 33.41\%$ variance):** *Orographic Altitude vs. Anthropogenic Agricultural Valley Interface* (`slope_deg` $+0.4592$, `dist_agri_m` $+0.4587$, `elevation_m` $+0.4560$, `dist_roads_m` $+0.4558$). Cohen's $d = -0.738$.
    - **$\text{PC3}$ ($\lambda_3 = 1.6440, 13.70\%$ variance):** *Vegetative Canopy Phenology & Warm Monsoon Hydration Regime* (`ndmi` $+0.6389$, `temp_2m_max_c` $+0.4598$, `vpd_72h_max_kpa` $+0.3409$, `precip_72h_sum_mm` $+0.3325$).
-2. **Hidden Patterns & Separation Zones Discovered (`fig21`–`fig27`, Tables 1–7):**
+2. **Hidden Patterns & Separation Zones Discovered (`fig21`–`fig27`):**
    - **Quadrant IV Pyro-Anthropogenic Convergence ($\text{PC1} > 0 \land \text{PC2} \le 0$):** Contains $28.50\%$ of observations ($5,208\text{ rows}$) but captures **68.61% of all wildfires ($601 / 876$)** at an **11.54% ignition rate** ($28.1\times$ higher than Quadrant II's $0.41\%$).
    - **Extreme Pyro-Anthropogenic Apex ($\text{PC1} > +2.5 \land \text{PC2} < -1.0, N = 604$):** Reaches a **23.34% wildfire ignition rate** ($141\text{ fires}$, $56.9\times$ Quadrant II).
    - **Composite Latent Super-Feature ($\text{Pyro\_PC\_Index} = \text{PC1} - \text{PC2}$):** Achieves Cohen's $d = +1.0586$ ($t = +35.80, p = 1.29 \times 10^{-195}$).
-   - **Hotelling's $T^2$ & Q-Residual Outliers (`fig27`):** Top 1% outliers ($T^2 > 10.96, Q > 8.75$) are high-altitude convective monsoon deluges (`precip_72h_sum_mm` up to $77.7\text{ mm}$, $0.00\%$ fire rate).
 
 ---
 
-## 💻 7. Quick Execution & Command Reference
+## 🚀 7. Digital Transformation Blueprint Reference (Disruptive Technologies — Activity 4)
 
-### Python Environment Setup
-```bash
-cd /home/eduardo/Workspaces/TERRA-FIRE/TERRA-FIRE
-/home/eduardo/Downloads/Terra-fire/.venv/bin/python --version
-```
+### 1. Paradigm Shift: Digitization $\to$ Digitalization $\to$ Digital Transformation
+- **Digitization:** Paper historical logs and NOM-015 permits converted to static spreadsheets.
+- **Digitalization:** Displaying post-ignition NASA FIRMS thermal hotspots on urban dashboards without altering the 3–12h reactive workflow.
+- **Digital Transformation (TERRA-FIRE):** Reconfiguring people, processes, technology, and culture to transition from **3–12h post-ignition reactive suppression** to **48–72h pre-ignition anticipatory prevention**, decentralizing spatial intelligence to disconnected *ejidos* and community brigades.
+
+### 2. Core Socio-Technical Mechanisms & Governance Innovations
+- **Non-Punitive Ejidal Data Charter:** Formal agreement signed in *Asambleas Ejidales* guaranteeing that the TERRA-FIRE Burn Semaphore is read-only and never used to issue SEMARNAT fines, neutralizing rural surveillance resistance.
+- **3-Color NOM-015 Burn Semaphore:** Intuitive visual traffic light (Green / Yellow / Red) advising farmers to defer *roza y quema* for 48 hours when $VPD_{max} > 2.0\text{ kPa}$ and $RH_{min} < 20\%$.
+- **Preventive Dispatch Protocol (`SOP-72H`):** Institutional standard operating procedure triggered by the daily 06:00 AM TreeSHAP Intelligence Briefing to pre-position CONAFOR/Civil Protection brigades and water tankers in **PCA Quadrant IV** borders 48–72h before peak desiccation.
+- **Network of *"Promotores Digitales Forestales"* & Wi-Fi Sync Kiosks:** Local rural youth champions and QR-enabled municipal/ejidal Wi-Fi access points enabling `< 15 second` offline synchronization of `< 12 MB` `.pbf` vector tiles into `IndexedDB`.
+
+### 3. Prosci ADKAR & Change Management KPIs
+- **Weekly Offline Tile Sync Rate Target:** $\ge 85\%$ of active brigade devices and *Comisariados*.
+- **Red-Alert Burn Deferral Compliance Target:** $\ge 75\%$ voluntary deferral of agricultural burns during Red Alert windows.
+- **Preventive Pre-Allocation Lead Time Target:** $\ge 48\text{ hours}$ prior to peak hazard window.
+- **System Usability Scale (SUS) Target:** $\ge 80 / 100$.
+- **Expected Socio-Ecological Impact:** **30%–50% reduction** in pasture-to-forest fire escapes (*Pastizal Inducido*), **25%–40% savings** in reactive helicopter suppression costs, and **Zero Hardware CapEx** (`< $15 USD/month` cloud batch compute).
+
+### 4. Five-Stage Implementation Roadmap (12-Month Horizon) & Readiness Decision
+1. **Stage 1 — Preparation (Months 1–2):** Steering Committee formation, Non-Punitive Charter signing, `SOP-72H` drafting, and 5 Municipal Wi-Fi Sync Kiosks audit.
+2. **Stage 2 — Capability Development (Months 3–4):** 02:00 UTC automated cloud-to-edge pipeline deployment, Offline MapLibre PWA launch, accreditation of 15 *Promotores Digitales*, and Tier 1–3 training workshops.
+3. **Stage 3 — Pilot Implementation (Months 5–7 | Spring Dry Season):** Live field pilot in Sierra Fría & Quadrant IV nodes, parallel shadow operations alongside SPPIF, and bi-weekly UX sprints.
+4. **Stage 4 — Deployment (Months 8–10):** Full statewide rollout across all 25 monitoring nodes in Aguascalientes, formal `SOP-72H` institutionalization, and *"Ejido Preventivo Certificado"* awards.
+5. **Stage 5 — Continuous Improvement (Months 11–12+):** Post-season XGBoost retraining (`matrix_v2.parquet`), **Sentinel-1 C-SAR** microwave cloud-penetration fusion, and multi-state scaling kit (Jalisco, Zacatecas, Durango).
+- **Official Transformation Assessment Verdict:** **`READY FOR TRANSFORMATION`** (**Composite Score: 9.43 / 10.0**).
+
+---
+
+## 💻 8. Quick Execution & Command Reference
 
 ### Run Standalone Analytical Engines
 ```bash
-# Activity 3: Full ETL Pipeline & 7-Gate QA Validation
+# Activity 3 (Data Science): Full ETL Pipeline & 7-Gate QA Validation
 python -m src.pipeline
 
-# Activity 4: Descriptive Statistics & Visual Dashboards (fig01 - fig12)
+# Activity 4 (Data Science): Descriptive Statistics & Visual Dashboards (fig01 - fig12)
 python src/data_intelligence_analysis.py
 
-# Activity 5: Correlation, OLS Regressions, VIF & Impact Ranking (fig13 - fig20)
+# Activity 5 (Data Science): Correlation, OLS Regressions, VIF & Impact Ranking (fig13 - fig20)
 python src/variable_impact_analysis.py
 
-# Activity 6: Multivariate PCA (12 -> 3 Dimensions) & Pattern Discovery (fig21 - fig27)
+# Activity 6 (Data Science): Multivariate PCA (12 -> 3 Dimensions) & Pattern Discovery (fig21 - fig27)
 python src/pattern_discovery_challenge.py
-```
-
-### Launch Interactive Notebooks
-```bash
-jupyter lab notebooks/data_engineering_lab.ipynb
-jupyter lab notebooks/data_intelligence_lab.ipynb
-jupyter lab notebooks/variable_impact_analysis.ipynb
-jupyter lab notebooks/pattern_discovery_challenge.ipynb
 ```
 
 ---
 
-## 🗺️ 8. Project Roadmap & Upcoming Steps
-1. **Activity 3 (Completed):** Data Engineering Lab — ETL pipeline, Parquet Feature Store, and 7-gate validation suite (**READY FOR ANALYSIS**).
-2. **Activity 4 (Completed):** Data Intelligence Lab — Central tendency, dispersion, Welch's $t$-tests, and 12 visual dashboards (**READY FOR ADVANCED ANALYSIS**).
-3. **Activity 5 (Completed):** Variable Impact Analysis — Pearson/Spearman correlations, 12 OLS regressions, VIF multicollinearity diagnostics, confounding proof, and Variable Impact Ranking (**READY FOR PATTERN DISCOVERY**).
-4. **Activity 6 (Completed):** Pattern Discovery Challenge — Unified 12-to-3 Spatiotemporal PCA (`PCA(n_components=3)` retaining $87.87\%$ variance in `['PC1', 'PC2', 'PC3']`), Quadrant IV discovery ($68.61\%$ of fires), seasonal hysteresis loop, and Hotelling's $T^2$ outlier diagnostics (`fig21`–`fig27`, **READY FOR SEGMENTATION**).
-5. **Next Activity (Intelligent Segmentation Lab):** Unsupervised clustering ($K$-Means, Gaussian Mixture Models, DBSCAN) exclusively in the orthogonal 3D PCA subspace (`['PC1', 'PC2', 'PC3']`) evaluated via Silhouette Score and Davies-Bouldin Index to segment micro-territorial pyro-climatic risk clusters.
-6. **Subsequent Activities (Machine Learning Challenge & Model Performance Validation):** 5-Fold Spatially Blocked Cross-Validation (`GroupKFold` by `voxel_id`) with XGBoost & LightGBM (`scale_pos_weight = 19.86`); PR-AUC, Brier Score calibration, and TreeSHAP explainability.
+## 🗺️ 9. Project Roadmap & Upcoming Steps
+1. **Data Science Act. 3 (Completed):** Data Engineering Lab — ETL pipeline, Parquet Feature Store, and 7-gate validation suite (**READY FOR ANALYSIS**).
+2. **Data Science Act. 4 (Completed):** Data Intelligence Lab — Central tendency, dispersion, Welch's $t$-tests, and 12 visual dashboards (**READY FOR ADVANCED ANALYSIS**).
+3. **Data Science Act. 5 (Completed):** Variable Impact Analysis — Pearson/Spearman correlations, 12 OLS regressions, VIF multicollinearity diagnostics, confounding proof, and Variable Impact Ranking (**READY FOR PATTERN DISCOVERY**).
+4. **Data Science Act. 6 (Completed):** Pattern Discovery Challenge — Unified 12-to-3 Spatiotemporal PCA (`PCA(n_components=3)` retaining $87.87\%$ variance in `['PC1', 'PC2', 'PC3']`), Quadrant IV discovery ($68.61\%$ of fires), seasonal hysteresis loop, and Hotelling's $T^2$ outlier diagnostics (`fig21`–`fig27`, **READY FOR SEGMENTATION**).
+5. **Disruptive Technologies Act. 4 (Completed):** Digital Transformation Blueprint — Current State Assessment, Opportunity Matrix, Future-State Blueprint (`SOP-72H`, Non-Punitive Ejido Charter, TreeSHAP Risk Cards, Offline PWA), Capability Gap Analysis, Stakeholder Adoption Strategy, Prosci ADKAR Change Management Plan, and 5-Stage Implementation Roadmap (**READY FOR TRANSFORMATION — 9.43/10**).
+6. **Next Data Science Activity (Intelligent Segmentation Lab):** Unsupervised clustering ($K$-Means, Gaussian Mixture Models, DBSCAN) in the orthogonal 3D PCA subspace (`['PC1', 'PC2', 'PC3']`) evaluated via Silhouette Score and Davies-Bouldin Index.
+7. **Subsequent Activities (Machine Learning Challenge & Model Performance Validation):** 5-Fold Spatially Blocked Cross-Validation (`GroupKFold` by `voxel_id`) with XGBoost & LightGBM (`scale_pos_weight = 19.86`); PR-AUC, Brier Score calibration, and TreeSHAP explainability.
